@@ -1,0 +1,277 @@
+/*
+	CSS Reset
+	http://meyerweb.com/eric/tools/css/reset/
+	v2.0 | 20110126
+	License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+strong {
+	font-weight: bold;
+}
+/*End Reset*/
+
+/*Begin Layout*/
+
+body {
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	color: #999;
+	font-size: 16px;
+	background:#bfbfbf;
+}
+h1, h2, h3 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	margin:0 0 15px 0;
+	line-height: 2;
+}
+h1 {
+	font-size: 36px;
+	letter-spacing: -2px;
+	line-height: 100%;
+}
+h1.title {
+	font-size: 46px;
+	font-weight: 700;
+	color: #6a6a6a;
+}
+h2 {
+	font-size: 24px;
+}
+h3 {
+	font-size: 20px;
+}
+p, ul li {
+	margin: 0 0 15px 0;
+	line-height: 1.5;
+	font-size: 16px;
+}
+.menuBtn {
+	background: center center no-repeat transparent;
+	background: #000;
+	display: block;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	left: 10px;
+}
+.active {
+	background: #f00;
+}
+.clear {
+	clear: both;
+}
+
+.amsterdam {
+	float: left;
+	margin-left: -100px;
+}
+.flag {
+	position: absolute;
+	color: #fff;
+	background: #000;
+	font-size: 20px;
+    font-weight: bold;
+    height: 30px;
+    left: 1px;
+    letter-spacing: 5px;
+    line-height: 30px;
+    position: absolute;
+    text-align: center;
+    top: 12px;
+    width: 97px;
+	font-family: 'Open Sans', sans-serif;
+}
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+#heart:before, #heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin :100% 100%;
+}
+#heart:before {
+	background: #f00 url(../img/xxx.png) -5px top no-repeat;
+}
+#heart span {
+	color: #000;
+    font-size: 25px;
+    left: 33px;
+    position: absolute;
+    top: 20px;
+    z-index: 100;
+    font-family: 'Open Sans', sans-serif;
+}
+.wrap {
+	width: 100%;
+	max-width: 1140px;
+	min-width: 960px;
+	z-index: 10;
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+}
+.section {
+	width: 100%;
+	max-width: 1140px;
+	min-width: 960px;
+	z-index: 10;
+	position: relative;
+	margin: 0 auto;
+	padding: 0 0 20px 0;
+}
+.inner {
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+	min-height: 50px;
+	padding: 60px 0;
+	font-size: 18px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+/* This is the selector i used for my menu, it needs to be set as position:absolute; */
+.subMenu {
+	position: absolute;
+	top: 0;
+	height: 50px;
+	z-index: 1000;
+	width: 100%;
+	max-width: 1140px;
+	min-width: 960px;
+	background: #f00;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	text-align: center;
+}
+.subMenu li {
+	display: inline-block;
+	height: 50px;
+	width: 20%;
+	border-right: 1px solid #f00;
+}
+.subNavBtn {
+	display: block;
+	text-decoration: none;
+	font-size: 18px;
+	text-align: center;
+	color: #fff;
+	height: 50px;
+	width: 100%;
+	line-height: 50px;
+	background: #000;
+	-moz-transition: .5s background ease;
+	-webkit-transition: .5s background ease;
+	-o-transition: .5s background ease;
+	transition: .5s background ease;
+}
+.subNavBtn:hover {
+	background: #fff;
+	color: #000;
+}
+/* SECTIONS */
+.sTop {
+	min-height: 500px;
+	background: #e5e5e5 url(../img/bg.png) left top repeat;
+	color:#3d3d3d;
+	padding-top: 40px;
+}
+.s1, .s2, .s3, .s4 {
+	min-height: 500px;
+	background-image: url(../img/perl.png);
+	background-position: 99% 3%;
+	background-repeat: no-repeat;
+}
+.s1 {
+	background-color: #2e2e2e;
+}
+.s2 {
+	background-color: #3f3f3f;
+}
+.s3 {
+	background-color: #504f4f;
+	color: #fff;
+}
+.inner ul {
+	margin-bottom: 15px;
+}
+.inner ul li {
+	list-style-type: circle;
+	list-style-position: inside;
+	line-height: 1.5;
+}
+
