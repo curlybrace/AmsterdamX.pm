@@ -167,7 +167,7 @@ p, ul li {
 #heart:before {
 	background: #f00 url(../img/xxx.png) -5px top no-repeat;
 }
-#heart span {
+/*#heart span {
 	color: #000;
     font-size: 25px;
     left: 33px;
@@ -175,7 +175,7 @@ p, ul li {
     top: 20px;
     z-index: 100;
     font-family: 'Open Sans', sans-serif;
-}
+}*/
 .wrap {
 	width: 100%;
 	max-width: 1140px;
@@ -252,7 +252,7 @@ p, ul li {
 }
 .s1, .s2, .s3, .s4 {
 	min-height: 500px;
-	background-image: url(../img/perl.png);
+	/*background-image: url(../img/perl.png);*/
 	background-position: 99% 3%;
 	background-repeat: no-repeat;
 }
