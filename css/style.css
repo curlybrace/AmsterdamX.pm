@@ -107,7 +107,7 @@ p, ul li {
 
 .amsterdam {
 	float: left;
-	margin-left: -100px;
+	margin-left: -105px;
 }
 .flag {
 	position: absolute;
@@ -192,10 +192,10 @@ p, ul li {
 	z-index: 10;
 	position: relative;
 	margin: 0 auto;
-	padding: 0 0 20px 0;
+	padding: 40px 0 20px 0;
 }
 .inner {
-	width: 960px;
+	width: 950px;
 	margin: 0 auto;
 	position: relative;
 	min-height: 50px;
@@ -238,6 +238,17 @@ p, ul li {
 	-webkit-transition: .5s background ease;
 	-o-transition: .5s background ease;
 	transition: .5s background ease;
+}
+.subNavBtn.current {
+	background: #666;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+.subNavBtn.current:hover {
+	background: #666;
+	color: #fff;
 }
 .subNavBtn:hover {
 	background: #fff;
