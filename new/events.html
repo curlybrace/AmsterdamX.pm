@@ -1,33 +1,4 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Events - AmsterdamX.pm</title>
-    <meta name="description" content="Upcoming and previous events and meetings of the AmsterdamX Perl Mongers group.">
-    <meta name = "keywords" content = "events, meetings, perl, amsterdam, amsterdam.pm, amsterdamx.pm">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" media="screen, projection, handheld" href="css.css">
-    <!--[if lte IE 8]>
-      <script>
-        var list='footer,main,nav'.split(','),
-            el;
-        while(el=list.pop()){
-            document.createElement(el);
-        }
-      </script>
-    <![endif]-->
-  </head>
-  <body>
-    <nav role="navigation">
-        <ul>
-          <li><a href="/">Home</a></li
-          ><li><a href="foo">Events</a></li
-          ><li><a href="#footer">About</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-      <main role="main">
+[% WRAPPER root.tt %]
         <h1>Events</h1> 
         <p><a href="foo">Link to videos overview page?</a></p>
 
@@ -99,18 +70,4 @@
            </li>
          </ol>
         </div>
-      </main>
-      <div role="contentinfo" id="footer">
-        <h2>About AmsterdamX.pm</h2>
-        <p>AmsterdamX.pm (Amsterdam e<strong>X</strong>pats Perl Mongers) is a new Perl Mongers group whose purpose is to optimize for expats. The major differences from <a href="http://perl.nl/amsterdam/">Amsterdam.pm</a> are:</p>
-        <ul>
-          <li>use English; We might speak more than 50 languages, but we commonly speak only one.</li>
-          <li>Meeting early: we meet at 18:30, so you can come straight from work instead of having a long buffer time to the meeting.</li>
-          <li>Held at Booking.com (<a href="https://www.google.com/maps/preview#!q=Herengracht+597%2C+1017CE+Grachtengordel-Zuid%2C+Amsterdam%2C+The+Netherlands&data=!4m11!1m10!2i23!4m8!1m3!1d23194967!2d-95.677068!3d37.0625!3m2!1i1228!2i683!4f13.1">location</a>), where most Perl expats in Amsterdam already work.</li>
-      </ul>
-      <p>This isn't instead of Amsterdam.pm, but to provide an additional group. It is not meant to replace, but to supplement. There is no affiliation between Amsterdam.pm and AmsterdamX.pm.</p>
-        </div>
-    </div>
-    <script src="js.js"></script>
-  </body>
-</html>
+[% END %]

@@ -187,18 +187,6 @@ var XXX = {
                 }
             };
         } 
-
-        //back to top
-        var toTop = document.createElement('div'),
-            topAnchor = document.createElement('a'),
-            toTopText = document.createTextNode('Back to top'),
-            container = Basis.getElementsByClass('container')[0];
-
-        topAnchor.href = '#top';
-        toTop.id = 'toTop';
-        container.appendChild(toTop).appendChild(topAnchor).appendChild(toTopText);
-      
-       //detect footer in view
     },
 //end init()
 
