@@ -167,6 +167,7 @@ else if (document.attachEvent) {
 /*end IE*/
 /*end Core*/
 
+/*Amsterdam XXX*/
 var XXX = {
     init: function() {
         //don't bother running if screen is size of mouse turd
@@ -174,25 +175,79 @@ var XXX = {
         if (width < 600) {return;}
 
         //top menu smoothscroll setup
-        var mainLinks = document.getElementsByTagName('NAV')[0].getElementsByTagName('UL')[0].getElementsByTagName('A'),
+        //assume tt has set class of 'current' on current page link
+        var container = Basis.getElementsByClass('container')[0],
+            mainLinks = document.getElementsByTagName('NAV')[0].getElementsByTagName('UL')[0].getElementsByTagName('A'),
             navHeight = document.getElementsByTagName('NAV')[0].clientHeight,
-            aboutLink = mainLinks[-1];
+            aboutLink,
+            currentPage,
+            footerLinks = document.getElementsByTagName('A'),
+            footer = document.getElementById('footer');
 
-        for (var link=0,leng=mainLinks.length;link<leng;link++) {
-            mainLinks[link].onclick = function(e) { 
-                XXX.clearClasses(mainLinks, leng);
+        footer.tabIndex = 0;
+
+        for (var link=0,l=mainLinks.length;link<l;link++) {
+            //track current page highlight
+            if (Basis.hasClass(mainLinks[link], 'current')) {
+                currentPage = mainLinks[link];
+            }
+            //track which one goes to footer
+            if (mainLinks[link].href.indexOf('#footer') != -1) {
+                aboutLink = mainLinks[link];
+            }
+            mainLinks[link].onclick = function() { 
+                //what if more in-page links are added?
+                //clear all current classes
+                XXX.clearClasses(mainLinks, l);
                 Basis.addClass(this, 'current');
-                if (this.href.indexOf('#footer') != -1) {
-                    XXX.smoothScroll(this, e, navHeight);
-                }
             };
         } 
+
+        //for all in-page links that go to the #footer...
+        for (var i=0,len=footerLinks.length;i<len;i++) {
+            if (footerLinks[i].href.indexOf('#footer') != -1) {
+                footerLinks[i].onclick = function(e) { 
+                    XXX.smoothScroll(this, e, navHeight);
+                    setTimeout(function() {
+                        footer.focus();
+                    }, 1200);
+                }
+            }
+        }
+        //back to top thingie
+        var topAnchor = document.createElement('a'),
+            toTopText = document.createTextNode('Back to top');
+
+        topAnchor.href = '#top';
+        topAnchor.id = 'toTop';
+        container.appendChild(topAnchor).appendChild(toTopText);
+
+        topAnchor.onclick = function(e) {
+            XXX.smoothScroll(this, e, navHeight);
+        };
+      
+        //scrolly footery stuff...
+        var viewportHeight = Math.max(
+                document.documentElement.clientHeight,
+                window.innerHeight || 0),
+            currentPosition = 0;
+
+        //listen for scroll, to deal with back to top and footer
+        Basis.addEventListener(window, 'scroll', function() {
+            var wait;        
+            clearTimeout(wait);
+            wait = setTimeout(function() {
+                currentPosition = XXX.getYPosition();
+                XXX.dealWithToTop(currentPosition, topAnchor);
+                XXX.dealWithFooter(footer, viewportHeight, currentPage, aboutLink);
+            }, 600);
+        });
     },
 //end init()
 
-   clearClasses: function(mainLinks, leng) {
-        while (leng--) {
-            Basis.removeClass(mainLinks[leng], 'current');
+    clearClasses: function(mainLinks, length) {
+        while (length--) {
+            Basis.removeClass(mainLinks[length], 'current');
         }
     },
 
@@ -241,6 +296,39 @@ var XXX = {
             return document.body.scrollTop;
         }
         return 0;
+    },
+
+    dealWithToTop: function(position, anchor) {
+        if (position >= 200) {
+            Basis.addClass(anchor, 'appear'); 
+        }
+        else {
+            Basis.removeClass(anchor, 'appear'); 
+        }
+    },
+
+    dealWithFooter: function(footer, viewportHeight, currentPage, aboutLink) {
+        var docTop = (document.documentElement.scrollTop ? 
+                      document.documentElement.scrollTop :
+                      document.body.scrollTop),
+            foot = footer,
+            area,
+            footerPos = foot.offsetTop;
+        while (foot.offsetParent &&
+            (foot.offsetParent != document.body)) {
+            foot = foot.offsetParent;
+            footerPos += foot.offsetTop;
+        }
+        area = parseInt(viewportHeight + docTop, 10);
+
+        if (area >= footerPos) {
+            Basis.removeClass(currentPage, 'current');
+            Basis.addClass(aboutLink, 'current');
+        }
+        else {
+            Basis.addClass(currentPage, 'current');
+            Basis.removeClass(aboutLink, 'current');
+        }
     }
 };
 
