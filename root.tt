@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>AmsterdamX.pm (Perl Mongers group)</title>
+    <meta name="description" content="Community of English speaking Perl developers in Amsterdam.">
+    <meta name="keywords" content="perl,amsterdam,amsterdam.pm,amsterdamx.pm">
+<!-- events needs different title, description... 
+    <title>Events - AmsterdamX.pm</title>
+    <meta name="description" content="Upcoming and previous events and meetings of the AmsterdamX Perl Mongers group.">
+    <meta name="keywords" content="events,meetings,perl,amsterdam,amsterdam.pm,amsterdamx.pm"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" media="screen, projection, handheld" href="css.css">
+    <!--[if lte IE 8]>
+      <script>
+        var list='footer,main,nav'.split(','),
+            el;
+        while(el=list.pop()){
+            document.createElement(el);
+        }
+      </script>
+    <![endif]-->
+    <!-- still need: under IE9 stylesheet, print stylesheet -->
+  </head>
+  <body>
+    <nav role="navigation">
+        [% INCLUDE menu.tt %]
+    </nav>
+    <div class="container">
+      <main role="main">
+        [% content %]
+      </main>
+      <div role="contentinfo" id="footer" tabindex="-1">
+        [% INCLUDE about.tt %]
+      </div>
+    </div>
+    <script src="js.js"></script>
+  </body>
+</html>

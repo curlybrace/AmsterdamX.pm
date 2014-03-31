@@ -1,50 +1,73 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>AmsterdamX.pm - Previous Events</title>
-		<meta name = "keywords" content = "perl, amsterdam, amsterdam.pm, amsterdamx.pm" />
-		<meta name = "description" content = "This is official page for AMsterdamX.pm community" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1 user-scalable=no">
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-		<link href="css/style.css" rel="stylesheet" type="text/css">
-	</head>
-	<body>
+[% WRAPPER root.tt %]
+        <h1>Events</h1> 
+        <p><a href="foo">Link to videos overview page?</a></p>
 
-		<div class="wrap">
+        <h2>Upcoming Events</h2>
+        <div>
+          <h3>Date</h3>
+          <ol>
+            <li>
+              <h4>Hackathon</h4>
+              <p>Abstract: camels are sexy</p>
+              <p>Possibly more than one sentence. And maybe very long and annoying, wrapping to multiple lines just to fuck with us.</p>
+              <p>Possibly more than one sentence.</p>
+           </li>
+           <li>
+              <h4>Talk Name, <span>Speaker</span></h4>
+              <p>Abstract: camels are sexy</p>
+            </li>
+          </ol>
 
-			<ul class="subMenu"><li><a href="/" id="sTop" class="subNavBtn">Home</a></li><li><b id="s1" class="subNavBtn current">Events</b></li><li><a href="about.html" id="s2" class="subNavBtn">About Us</a></li></ul>
+          <h3>Date</h3>
+          <ol>
+            <li>
+              <h4>FOSDEM, <span>Funky stuff</span></h4>
+              <p>Abstract: Ovid's talks attract Pythonistas</p>
+           </li>
+        </div>
+          
+        <h2>Previous Events</h2>
+        <div>
+          <h3>10/10/10</h3>
+          <ol>
+            <li>
+              <h4>Talk name, <span>Speaker</span></h4>
+              <p>Abstract: camels are sexy</p>
+              <p>Possibly more than one sentence.</p>
+              <p>Possibly more than one sentence.</p>
+           </li>
+           <li>
+              <h4>Talk Name, <span>Speaker</span></h4>
+              <p>Abstract: camels are sexy</p>
+           </li>
+         </ol>
 
+          <h3>foo/bar/baz</h3>
+          <ol>
+            <li>
+              <h4>Talk name, <span>Speaker</span></h4>
+              <p>Abstract: camels are sexy</p>
+              <p>Possibly more than one sentence.</p>
+              <p>Possibly more than one sentence.</p>
+           </li>
+           <li>
+              <h4>Talk Name, <span>Speaker</span></h4>
+              <p>Abstract: camels are sexy</p>
+           </li>
+         </ol>
 
-			<div class="section s1">
-				<div class="inner">
-					<div class="amsterdam">
-						<div id="heart"><!--span>pm</span--></div>
-					</div>
-					<h1>Previous Events</h1>
-					<p>This is a page with previous events information</p>
-
-					<h2>25.11.2013</h2>
-
-					<p>Bla bla bla</p>
-
-
-				</div>
-				<br class="clear">
-			</div>
-		</div>
-
-
-	<!-- Scripts -->
-
-	<script type="text/javascript">
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		ga('create', 'UA-46048313-1', 'pm.org');
-		ga('send', 'pageview');
-	</script>
-
-	</body>
-</html>
+          <h3>00-00-0000</h3>
+          <ol>
+            <li>
+              <h4>Talk name, <span>Speaker</span></h4>
+              <p>Abstract: camels are sexy</p>
+              <p>Possibly more than one sentence.</p>
+              <p>Possibly more than one sentence.</p>
+           </li>
+           <li>
+              <h4>Talk Name, <span>Speaker</span></h4>
+              <p>Abstract: camels are sexy</p>
+           </li>
+         </ol>
+        </div>
+[% END %]
