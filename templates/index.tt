@@ -10,11 +10,12 @@
             <p>If you feel like giving a talk, contact the <a href="http://mail.pm.org/mailman/listinfo/amsterdamx-pm">AmsterdamX Perl Mongers mailing list</a>, or contact Sawyer X directly.
             <p>The meetings are suitable for beginners, intermediates and advanced!</p>
             <p class="upcoming"><a href="events.html#upcoming">Upcoming events</a></p><!-- perl events too like FOSDEM?-->
-            <h3>Next Scheduled Event</h3>
-            <p>Or, "No scheduled events at this time"</p>
+        </div>
+        <div>
+            <h2>Next Scheduled Event</h2>
             <dl>
               <dt>Date:</dt>
-              <dd>Tuesday, October 29th.</dd>
+              <dd>Tuesday, May 27th.</dd>
               <dt>Time:</dt>
               <dd>18.30&#8211;20.30 (approximately)</dd>
               <dt>Location:</dt>
@@ -23,14 +24,32 @@
               <dd>
                 <ol>
                   <li>
-                    <h4>Talk Name, <span>Speaker</span></h4>
-                    <p>Abstract: camels are sexy</p>
+                    <h4>
+                      <span>H.Merijn Brand</span>
+                      :: CSV looked at with an end-user view
+                    </h4>
+                    <ul>
+                      <li>New functionality</li>
+                      <li>RFC 7111</li>
+                      <li>Callbacks and hooks</li>
+                      <li>Parse CSV safe without writing object-oriented loops</li>
+                    </ul>
                   </li>
                   <li>
-                    <h4>2nd Talk Name, </span>Speaker</span></h4>
-                    <p>Abstract: onions are smelly</p>
-                    <p>Possibly more than one sentence.</p>
-                    <p>Could even link to slides beforehand: <a href="toslides">Slides, yo</a></p>
+                      <h4>
+                        <span>Simon Bertrang</span>
+                        :: Stylesheet Compression for Fun and Profit
+                      </h4>
+                      <p>CSS::Compressor is a pure Perl implementation of the CSS compression parts of Yahoo!&apos;s YUIcompressor.</p>
+                      <p>This talk is about motivation, insights, benefits and more, including facts and numbers from production.</p>
+                  </li>
+                  <li>
+                    <h4>
+                      <span>Mickey Nasriachi</span>
+                      :: MetaCPAN::API is dead!
+                    </h4>
+                    <p>MetaCPAN::Client provides the official interface to MetaCPAN&apos;s abundance of features and introspection.</p>
+                    <p>Reading the documentation is boring, come to my talk instead!</p>
                   </li>
                 </ol>
               </dd> 
