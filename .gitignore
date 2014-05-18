@@ -1,2 +1,4 @@
-about.txt
+generated/
+templates/events.tt
+*.swp
 

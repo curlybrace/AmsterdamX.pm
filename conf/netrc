@@ -1,0 +1,10 @@
+machine groups.pm.org
+login <user>
+password <pass>
+
+macdef init
+cd 
+mput *.html
+
+
+
