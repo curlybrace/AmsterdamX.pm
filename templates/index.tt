@@ -15,7 +15,7 @@
             <h2>Next Scheduled Event</h2>
             <dl>
               <dt>Date:</dt>
-              <dd>Tuesday, May 27th.</dd>
+              <dd>Tuesday, July 29th.</dd>
               <dt>Time:</dt>
               <dd>18.30&#8211;20.30 (approximately)</dd>
               <dt>Location:</dt>
@@ -23,34 +23,23 @@
               <dt>Talks:</dt>
               <dd>
                 <ol>
-                  <li>
-                    <h4>
-                      <span>H.Merijn Brand</span>
-                      :: CSV looked at with an end-user view
-                    </h4>
-                    <ul>
-                      <li>New functionality</li>
-                      <li>RFC 7111</li>
-                      <li>Callbacks and hooks</li>
-                      <li>Parse CSV safe without writing object-oriented loops</li>
-                    </ul>
-                  </li>
-                  <li>
+                    <li>
                       <h4>
-                        <span>Simon Bertrang</span>
-                        :: Stylesheet Compression for Fun and Profit
+                        <span>Yves Orton (demerphq)</span>
+                        :: Breaking Perls Old Hash Function
                       </h4>
-                      <p>CSS::Compressor is a pure Perl implementation of the CSS compression parts of Yahoo!&apos;s YUIcompressor.</p>
-                      <p>This talk is about motivation, insights, benefits and more, including facts and numbers from production.</p>
-                  </li>
-                  <li>
-                    <h4>
-                      <span>Mickey Nasriachi</span>
-                      :: MetaCPAN::API is dead!
-                    </h4>
-                    <p>MetaCPAN::Client provides the official interface to MetaCPAN&apos;s abundance of features and introspection.</p>
-                    <p>Reading the documentation is boring, come to my talk instead!</p>
-                  </li>
+                      <p>Yves will talk about the hash randomization in the perl core, or phrased differently: Key Discovery Attack on Bob Jenkins One-At-A-Time Hash (as used in earlier perls).</p>
+                      <p>Yves will explain the mechanism, the weakness, and how it was solved in modern versions of the perl interpreter.</p>
+                    </li>
+                    <li>
+                      <h4>
+                        <span>Abigail</span>
+                        :: Releasing perl
+                      </h4>
+                      <p>For many years, perl releases were infrequent, with a single person (the &quot;pumpking&quot;) responsible for several subsequent releases.</p>
+                      <p>This has changed in the last years, and perl is released on a frequent schedule, with many people (&quot;release managers&quot;) taking turns and making a release of perl. In this talk, we will look at what it takes to make a perl release, and show that &quot;everyone&quot; is able to become a release manager.</p>
+                      <p>Abigail can speak from personal experiences, having released perl twice before. Abigail is also the acting release manager, and will do a release at the end of July 2014.</p>
+                    </li>
                 </ol>
               </dd> 
             </dl>
