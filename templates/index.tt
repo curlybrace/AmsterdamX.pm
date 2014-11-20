@@ -8,37 +8,52 @@
           <h2>Meetings and Events</h2>
             <p>All meetings organized by AmsterdamX.pm are completely 100% free-of-charge, and everyone is invited. Anyone can give talks on almost any subject, while Perl-related subjects are obviously more recommended. :) Meetings are usually held at <a href="https://www.google.com/maps/preview#!q=Herengracht+597%2C+1017CE+Grachtengordel-Zuid%2C+Amsterdam%2C+The+Netherlands&data=!4m11!1m10!2i23!4m8!1m3!1d23194967!2d-95.677068!3d37.0625!3m2!1i1228!2i683!4f13.1">Booking.com, 1017CE, Herengracht 597</a>.</p>
             <p>If you feel like giving a talk, contact the <a href="http://mail.pm.org/mailman/listinfo/amsterdamx-pm">AmsterdamX Perl Mongers mailing list</a>, or contact Sawyer X directly.
-            <p>The meetings are suitable for beginners, intermediates and advanced!</p>
+            <p>The meetings are suitable for beginners, intermediates, and advanced!</p>
             <p class="upcoming"><a href="events.html#upcoming">Upcoming events</a></p><!-- perl events too like FOSDEM?-->
         </div>
         <div>
             <h2>Next Scheduled Event</h2>
             <dl>
               <dt>Date:</dt>
-              <dd>Tuesday, July 29th.</dd>
+              <dd>Tuesday, November 25th.</dd>
               <dt>Time:</dt>
               <dd>18.30&#8211;20.30 (approximately)</dd>
               <dt>Location:</dt>
               <dd><a href="https://www.google.com/maps/preview#!q=Herengracht+597%2C+1017CE+Grachtengordel-Zuid%2C+Amsterdam%2C+The+Netherlands&data=!4m11!1m10!2i23!4m8!1m3!1d23194967!2d-95.677068!3d37.0625!3m2!1i1228!2i683!4f13.1">Booking.com, 1017CE, Herengracht 597 (Google Map)</a>, Bejing Room.</dd>
+              <dd>Please fill in <a href="https://www.surveymonkey.com/s/5CVZS3K">this form</a> if you're arriving.</dd>
               <dt>Talks:</dt>
               <dd>
                 <ol>
                     <li>
                       <h4>
-                        <span>Yves Orton (demerphq)</span>
-                        :: Breaking Perls Old Hash Function
+                        <span>H.Merijn Brand (tux)</span>
+                        :: What I miss in &quot;pack&quot; and &quot;unpack&quot;
                       </h4>
-                      <p>Yves will talk about the hash randomization in the perl core, or phrased differently: Key Discovery Attack on Bob Jenkins One-At-A-Time Hash (as used in earlier perls).</p>
-                      <p>Yves will explain the mechanism, the weakness, and how it was solved in modern versions of the perl interpreter.</p>
+                      <p>Pack and unpack enable us to view binary data as structured data. Using advanced patterns, these data chunks might even be perceived as dynamic data sources. There is one drawback on the implementation of unpack in the CORE: it only works on scalar values.</p>
+                      <p>I will not show you how it can be done (that will be quite an job), but I will try to show you how code could change if unpack were to work on data streams as well. I&apos;ll use PerlMonk posts as examples, though my original idea came from something I&apos;ll also show.</p>
+                      <p>I hope this will be some kind of interactive, and there will be a discussion on weather this is a useful feature to implement. It will not be a slick slideshow.</p>
                     </li>
                     <li>
                       <h4>
-                        <span>Abigail</span>
-                        :: Releasing perl
+                        <span>Damien Krotkine (dams)</span>
+                        :: Exceptions with no strings attached
                       </h4>
-                      <p>For many years, perl releases were infrequent, with a single person (the &quot;pumpking&quot;) responsible for several subsequent releases.</p>
-                      <p>This has changed in the last years, and perl is released on a frequent schedule, with many people (&quot;release managers&quot;) taking turns and making a release of perl. In this talk, we will look at what it takes to make a perl release, and show that &quot;everyone&quot; is able to become a release manager.</p>
-                      <p>Abigail can speak from personal experiences, having released perl twice before. Abigail is also the acting release manager, and will do a release at the end of July 2014.</p>
+                      <p>Perl exceptions can be anything, as long as they are scalars. This bring issues. Exception::Stringy aims to fix that</p>
+                    </li>
+                    <li>
+                      <h4>
+                        <span>Peter Rabbitson (ribasushi)</span>
+                        :: DBIx::Class - what is it and what is it good for?
+                      </h4>
+                      <p>DBIx::Class is a widely used and just as widely misunderstood SQL metaprogramming framework (no, it is not an ORM, it just plays one on TV).</p>
+                      <p>Come to see the primary maintainer of DBIx::Class (a.k.a. DBIC) give an overview of its architecture, show some more advanced use cases where the library really shines, and generally rant about the sorry state of the RDBMS universe. ;)</p>
+                    </li>
+                    <li>
+                      <h4>
+                        <span>Stevan Little</span>
+                        :: Plack::Debugger: A new debugger for Plack Applications
+                      </h4>
+                      <p>Plack::Debugger is a newly released addition to the Plack toolbox. It is a rethinking of the excellent Plack::Middleware::Debug module designed specifically to work with the AJAX heavy web applications of today. This talk will provide an overview of the straight-out-of-the-box functionality this module provides, as well as examples of how to extend it for your particular environment.</p>
                     </li>
                 </ol>
               </dd> 
