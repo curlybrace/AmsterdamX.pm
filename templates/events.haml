@@ -1,0 +1,99 @@
+%h2 Upcoming Events
+%div
+  %h3 November 25th, 2014
+  %ol
+    %li
+      %h4
+        %span H.Merijn Brand (tux)
+        :: What I miss in "pack" and "unpack"
+      %p Pack and unpack enable us to view binary data as structured data. Using advanced patterns, these data chunks might even be perceived as dynamic data sources. There is one drawback on the implementation of unpack in the CORE: it only works on scalar values.
+      %p I will not show you how it can be done (that will be quite an job), but I will try to show you how code could change if unpack were to work on data streams as well. I'll use PerlMonk posts as examples, though my original idea came from something I'll also show.
+      %p I hope this will be some kind of interactive, and there will be a discussion on weather this is a useful feature to implement. It will not be a slick slideshow.
+    %li
+      %h4
+        %span Damien Krotkine (dams)
+        :: Exceptions with no strings attached
+      %p Perl exceptions can be anything, as long as they are scalars. This bring issues. Exception::Stringy aims to fix that
+    %li
+      %h4
+        %span Peter Rabbitson (ribasushi)
+        :: DBIx::Class - what is it and what is it good for?
+      %p DBIx::Class is a widely used and just as widely misunderstood SQL metaprogramming framework (no, it is not an ORM, it just plays one on TV).
+      %p Come to see the primary maintainer of DBIx::Class (a.k.a. DBIC) give an overview of its architecture, show some more advanced use cases where the library really shines, and generally rant about the sorry state of the RDBMS universe. ;)
+    %li
+      %h4
+        %span Stevan Little
+        :: Plack::Debugger: A new debugger for Plack Applications
+      %p Plack::Debugger is a newly released addition to the Plack toolbox. It is a rethinking of the excellent Plack::Middleware::Debug module designed specifically to work with the AJAX heavy web applications of today. This talk will provide an overview of the straight-out-of-the-box functionality this module provides, as well as examples of how to extend it for your particular environment.
+  %h3 September 30th, 2014
+  %ol
+    %li
+      %h4
+        %span Rafaël Garcia-Suarez (rgs)
+        :: De anatomische les van Dr. RGS
+      %p Watch a Perl 5 patch being written, as if you were in the perl5-porter's brain!
+    %li
+      %h4
+        %span Ingy döt Net
+        :: Surprise talk
+      %p (written after the meeting) Ingy joined in and talked about awesome stuff he's been working on
+    %li
+      %h4
+        %span Karen Pauly
+        :: The Perl Foundation (TPF)
+      %p Karen, the president of The Perl Foundation (TPF), will talk to us a bit about TPF.
+  %h3 July 29th, 2014
+  %ol
+    %li
+      %h4
+        %span Yves Orton (demerphq)
+        :: Breaking Perls Old Hash Function
+      %p Yves will talk about the hash randomization in the perl core, or phrased differently: Key Discovery Attack on Bob Jenkins One-At-A-Time Hash (as used in earlier perls).
+      %p Yves will explain the mechanism, the weakness, and how it was solved in modern versions of the perl interpreter.
+    %li
+      %h4
+        %span Abigail
+        :: Releasing perl
+      %p For many years, perl releases were infrequent, with a single person (the "pumpking") responsible for several subsequent releases.
+      %p This has changed in the last years, and perl is released on a frequent schedule, with many people ("release managers") taking turns and making a release of perl. In this talk, we will look at what it takes to make a perl release, and show that "everyone" is able to become a release manager.
+      %p Abigail can speak from personal experiences, having released perl twice before. Abigail is also the acting release manager, and will do a release at the end of July 2014.
+  %h3 May 27th, 2014
+  %ol
+    %li
+      %h4
+        %span H.Merijn Brand
+        :: CSV looked at with an end-user view
+      %ul
+        %li New functionality
+        %li RFC 7111
+        %li Callbacks and hooks
+        %li Parse CSV safe without writing object-oriented loops
+    %li
+      %h4
+        %span Simon Bertrang
+        :: Stylesheet Compression for Fun and Profit
+      %p CSS::Compressor is a pure Perl implementation of the CSS compression parts of Yahoo!'s YUIcompressor.
+      %p This talk is about motivation, insights, benefits and more, including facts and numbers from production.
+    %li
+      %h4
+        %span Mickey Nasriachi
+        :: MetaCPAN::API is dead!
+      %p MetaCPAN::Client provides the official interface to MetaCPAN's abundance of features and introspection.
+      %p Reading the documentation is boring, come to my talk instead!
+
+%h2 Previous Events
+%div
+  %h3 January 28th, 2014
+  %ol
+    %li
+      %h4
+        %span Philippe Bruhat (BooK)
+        :: Programming Slides
+      %p Every time I write slides I want something different, and each time the tool I used previously does not quite fit the next talk. After having used plain HTML, Magic Point, S5, LibreOffice Impress, and PDF::API2, I'm probably settling on PostScript for some time.
+    %li
+      %h4
+        %span Sawyer X
+        :: Perl and the Web - A Love Story
+      %p In the beginning of the great kingdom of the Internet, there was one ruler: Perl. With time, fallen from grace, the beautiful princess language lost its place on the throne, giving way to Ruby, Python, and to the dismay and horror of everyone in the kingdom, PHP.
+      %p But all is not lost. While underground, Perl has schemed a plot to overthrow the competitors. That plan is Plack/PSGI.
+

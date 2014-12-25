@@ -1,5 +1,0 @@
-<ul>
-  <li><a[% page == 'home'?' class="current"':'' %] href="/">Home</a></li
-  ><li><a[% page == 'events'?' class="current"':'' %] href="events.html">Events</a></li
-  ><li><a href="#footer">About</a></li>
-</ul>
