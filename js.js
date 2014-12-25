@@ -1,34 +1,48 @@
-/*Core*/
 var Basis = {
     hasClass: function(target, classValue) {
         var pattern = new RegExp('(^| )' + classValue + '( |$)');
-        return (pattern.test(target.className)); //True or False
+        return (pattern.test(target.className));
     },
-    
+
     addClass: function(target, classValue) {
         if(!Basis.hasClass(target, classValue)) {
-            classValue = (target.className=='') ? classValue : (' '+classValue);
-            target.className += classValue;
-        } 
+            target.className+=
+                  (target.className === '') ?
+                               classValue :
+                          (' ' + classValue);
+        }
     },
 
     removeClass: function(target, classValue) {
         if (Basis.hasClass(target, classValue)) {
-            var pattern = new RegExp('(\\s|^)' + classValue + '(\\s|$)');
-            target.className = target.className.replace(pattern, '');
+            var pattern = new RegExp('(^| )' + classValue + '( |$)');
+            target.className = target.className.replace(pattern,'$1').replace(/ $/,'');
         }
     },
 
-    getElementsByClass: function(classValue, parentEl) {
-        var allElements = (arguments.length>1) ?
-                          parentEl.getElementsByTagName('*') :
-                          document.body.getElementsByTagName('*'),
-            matchedElements = [],
-            pattern = new RegExp('(^| )' + classValue + '( |$)');
+    getElementsByClass: function(classValue, parent) {
+        var matchedElements = [],
+            allElements;
+        if (document.querySelectorAll) {
+            allElements = (arguments.length > 1) ?
+                parent.querySelectorAll('.' + classValue) :
+                document.querySelectorAll('.' + classValue);
+            matchedElements = Basis.realArray(allElements);
+        }
+        //favourite browzer
+        else {
+            allElements=
+                    (arguments.length > 1) ?
+                    parent.getElementsByTagName('*') :
+                    document.body.getElementsByTagName('*');
+            var pattern = new RegExp('(^| )' + classValue + '( |$)'),
+                i,
+                l = allElements.length;
 
-        for (var i=0, l=allElements.length; i<l; i++) {
-            if(pattern.test(allElements[i].className)) {
-                matchedElements[matchedElements.length] = allElements[i];
+            for (i = 0; i < l; i++) {
+                if(pattern.test(allElements[i].className)) {
+                    matchedElements[matchedElements.length] = allElements[i];
+                }
             }
         }
         return matchedElements;
