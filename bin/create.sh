@@ -21,9 +21,10 @@ fi
 
 pushd templates
 
-"$base"/bin/render_events.pl events.haml > events.tt
+"$base"/bin/render_events.pl
+"$base"/bin/send_email_and_tweets.pl "$HOME"/amsterdamx_conf.yaml
 
-pages_list="about events index"
+pages_list="about events"
 
 for page in $pages_list; do
     echo "Creating $page..."
