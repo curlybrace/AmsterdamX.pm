@@ -1,0 +1,13 @@
+Hey everyone,
+
+It's time for the official reminder that TOMORROW there's an
+AmsterdamX.pm meeting with some very awesome people:
+[% FOREACH key IN talks.keys %]
+* [% talks.$key.speaker %] - [% talks.$key.title %]
+[% END %]
+
+Date: [% daynum %], [% month %] [% day %].
+Time: 18:30 - 20:30 (theoretically).
+Location: Booking.com, Herengracht 597, [% room %] Room on [% floor %] floor.
+
+Remember to fill in the survey: [% survey %].

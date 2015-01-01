@@ -1,0 +1,50 @@
+This [% month %] we're getting lots of amazing speakers. Don't miss it!
+
+Please also fill in the following form if you intend to come:
+$survey
+
+In a nutshell:
+Date: [% daynum %], [% month %] [% day %].
+Time: 18:30 - 20:30 (theoretically)
+Location: Booking.com, Herengracht 597, [% room %] room on [% floor %] floor.
+
+Talks:
+[% FOREACH key IN talks.keys %]
+[% talks.$key.speaker %] - [% talks.$key.title %]
+[% FOREACH line IN talks.$key.detail %]
+[% line %]
+[% END %]
+[% END %]
+Unabridged:
+You've probably heard of the Perl Mongers meetings, where fellow Perl (and non-Perl) programmers can get together to "talk shop", make fun of everything (including Perl), and have a good time. These meetings often have a few technical talks (which are usually light-hearted, and not necessarily - but likely - involve Perl). There are already Amsterdam.pm meetings. This is not about those. This is about AmsterdamX.pm.
+
+The talks can be a 5 minute tidbit about a cool module, or a 40 minute tutorial about some cool new (or old) software.
+
+AmsterdamX.pm?
+AmsterdamX.pm (Amsterdam eXpats Perl Mongers) is a new Perl Mongers group whose purpose is to optimize for expats. The major differences are:
+* use English; We might speak more than 50 languages, but we commonly speak only one.
+* Meeting early: we meet at 18:30, so you can come straight from work instead of having a long buffer time to the meeting.
+* Held at Booking.com, where most Perl expats in Amsterdam already work.
+
+This isn't to replace Amsterdam.pm, but to provide an additional group. It is only meant to supplement.
+
+Why should I attend?
+Here are a few reasons which might appeal to you:
+* You will improve your knowledge of Perl (and most likely other technologies) through the knowledge and experience of others. It's like a free course, with snacks!
+* You could give a talk and share your knowledge and experience. If you're going to YAPC to give a talk, this is great practice.
+* It's a wonderful chance to socialize.
+
+How many talks, and how long are they?
+Usually there will be 2-3 talks, ranging between 5 minutes (lightning) and 40 minutes (tutorial).
+
+Is it just for Booking.com?
+No. This isn't Booking.pm, this is AmsterdamX.pm. (also, Sparta!)
+This means that everyone is invited! We suggest that people register so we could have a good estimate of the people arriving. This will help with various things like optimized snack distribution, making sure reception knows of people arriving that don't have keys, making sure we get a proper room, etc.
+
+Now I'm interested, what's the next step?
+Please let us know by return email if you will be attending as well as the names of anyone you plan on bringing from outside of Booking.com.
+
+Then mark the date, time and place, and show up!
+
+See you there!
+
