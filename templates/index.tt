@@ -1,6 +1,42 @@
-[% WRAPPER root.tt %]
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>AmsterdamX.pm (Perl Mongers group)</title>
+    <meta name="description" content="Community of English speaking Perl developers in Amsterdam.">
+    <meta name="keywords" content="perl,amsterdam,amsterdam.pm,amsterdamx.pm">
+<!-- events needs different title, description...
+    <title>Events - AmsterdamX.pm</title>
+    <meta name="description" content="Upcoming and previous events and meetings of the AmsterdamX Perl Mongers group.">
+    <meta name="keywords" content="events,meetings,perl,amsterdam,amsterdam.pm,amsterdamx.pm"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" media="screen, projection, handheld" href="css.css">
+    <!--[if lte IE 8]>
+      <script>
+        var list='footer,main,nav'.split(','),
+            el;
+        while(el=list.pop()){
+            document.createElement(el);
+        }
+      </script>
+    <![endif]-->
+    <!-- still need: under IE9 stylesheet, print stylesheet -->
+  </head>
+  <body>
+    <nav role="navigation">
+        <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="events.html">Events</a></li>
+  <li><a href="#footer">About</a></li>
+</ul>
+
+    </nav>
+    <div class="container">
+      <main role="main">
+
         <div>
-          <h1>AmsterdamX.pm</h1> 
+          <h1>AmsterdamX.pm</h1>
           <p>AmsterdamX is a <a href="http://www.pm.org">Perl Mongers</a> group of English-speaking Perl developers in Amsterdam. We meet to have talks and/or social time every so often, usually monthly.</p>
           <p><a href="#footer">Read more about who we are</a>.</p>
         </div>
@@ -12,51 +48,47 @@
             <p class="upcoming"><a href="events.html#upcoming">Upcoming events</a></p><!-- perl events too like FOSDEM?-->
         </div>
         <div>
-            <h2>Next Scheduled Event</h2>
+            <a id="new_event" href="#new_event"><h2>Next Scheduled Event</h2></a>
             <dl>
               <dt>Date:</dt>
-              <dd>Tuesday, November 25th.</dd>
+              <dd>[% daynum %], [% month %] [% day %].</dd>
               <dt>Time:</dt>
               <dd>18.30&#8211;20.30 (approximately)</dd>
               <dt>Location:</dt>
-              <dd><a href="https://www.google.com/maps/preview#!q=Herengracht+597%2C+1017CE+Grachtengordel-Zuid%2C+Amsterdam%2C+The+Netherlands&data=!4m11!1m10!2i23!4m8!1m3!1d23194967!2d-95.677068!3d37.0625!3m2!1i1228!2i683!4f13.1">Booking.com, 1017CE, Herengracht 597 (Google Map)</a>, Bejing Room.</dd>
-              <dd>Please fill in <a href="https://www.surveymonkey.com/s/5CVZS3K">this form</a> if you're arriving.</dd>
+              <dd><a href="https://www.google.com/maps/preview#!q=Herengracht+597%2C+1017CE+Grachtengordel-Zuid%2C+Amsterdam%2C+The+Netherlands&data=!4m11!1m10!2i23!4m8!1m3!1d23194967!2d-95.677068!3d37.0625!3m2!1i1228!2i683!4f13.1">Booking.com, 1017CE, Herengracht 597 (Google Map)</a>, [% room %] Room, [% floor %] floor.</dd>
+              <dd>Please fill in <a href="[% survey_link %]">this form</a> if you're arriving.</dd>
               <dt>Talks:</dt>
               <dd>
-                <ol>
-                    <li>
-                      <h4>
-                        <span>H.Merijn Brand (tux)</span>
-                        :: What I miss in &quot;pack&quot; and &quot;unpack&quot;
-                      </h4>
-                      <p>Pack and unpack enable us to view binary data as structured data. Using advanced patterns, these data chunks might even be perceived as dynamic data sources. There is one drawback on the implementation of unpack in the CORE: it only works on scalar values.</p>
-                      <p>I will not show you how it can be done (that will be quite an job), but I will try to show you how code could change if unpack were to work on data streams as well. I&apos;ll use PerlMonk posts as examples, though my original idea came from something I&apos;ll also show.</p>
-                      <p>I hope this will be some kind of interactive, and there will be a discussion on weather this is a useful feature to implement. It will not be a slick slideshow.</p>
-                    </li>
-                    <li>
-                      <h4>
-                        <span>Damien Krotkine (dams)</span>
-                        :: Exceptions with no strings attached
-                      </h4>
-                      <p>Perl exceptions can be anything, as long as they are scalars. This bring issues. Exception::Stringy aims to fix that</p>
-                    </li>
-                    <li>
-                      <h4>
-                        <span>Peter Rabbitson (ribasushi)</span>
-                        :: DBIx::Class - what is it and what is it good for?
-                      </h4>
-                      <p>DBIx::Class is a widely used and just as widely misunderstood SQL metaprogramming framework (no, it is not an ORM, it just plays one on TV).</p>
-                      <p>Come to see the primary maintainer of DBIx::Class (a.k.a. DBIC) give an overview of its architecture, show some more advanced use cases where the library really shines, and generally rant about the sorry state of the RDBMS universe. ;)</p>
-                    </li>
-                    <li>
-                      <h4>
-                        <span>Stevan Little</span>
-                        :: Plack::Debugger: A new debugger for Plack Applications
-                      </h4>
-                      <p>Plack::Debugger is a newly released addition to the Plack toolbox. It is a rethinking of the excellent Plack::Middleware::Debug module designed specifically to work with the AJAX heavy web applications of today. This talk will provide an overview of the straight-out-of-the-box functionality this module provides, as well as examples of how to extend it for your particular environment.</p>
-                    </li>
-                </ol>
-              </dd> 
+                [% FOREACH key IN talks.keys %]
+                    <ol>
+                      <li>
+                        <h4>
+                          <span>[% talks.$key.speaker %]</span>
+                          :: [% talks.$key.title %]
+                        </h4>
+                        [% FOREACH line IN talks.$key.detail %]
+                        <p>[% line %]</p>
+                        [% END %]
+                      </li>
+                    </ol>
+                [% END %]
+              </dd>
             </dl>
         </div>
-[% END %]
+
+      </main>
+      <div role="contentinfo" id="footer" tabindex="-1">
+        <h2>About AmsterdamX.pm</h2>
+  <p>AmsterdamX.pm (Amsterdam e<strong>X</strong>pats Perl Mongers) is a new Perl Mongers group whose purpose is to optimize for expats. The major differences from <a href="http://perl.nl/amsterdam/">Amsterdam.pm</a> are:</p>
+  <ul>
+    <li>use English; We might speak more than 50 languages, but we commonly speak only one.</li>
+    <li>Meeting early: we meet at 18:30, so you can come straight from work instead of having a long buffer time to the meeting.</li>
+    <li>Held at Booking.com (<a href="https://www.google.com/maps/preview#!q=Herengracht+597%2C+1017CE+Grachtengordel-Zuid%2C+Amsterdam%2C+The+Netherlands&data=!4m11!1m10!2i23!4m8!1m3!1d23194967!2d-95.677068!3d37.0625!3m2!1i1228!2i683!4f13.1">location</a>), where most Perl expats in Amsterdam already work.</li>
+  </ul>
+  <p>This isn't instead of Amsterdam.pm, but to provide an additional group. It is not meant to replace, but to supplement. There is no affiliation between Amsterdam.pm and AmsterdamX.pm.</p>
+
+      </div>
+    </div>
+    <script src="js.js"></script>
+  </body>
+</html>
