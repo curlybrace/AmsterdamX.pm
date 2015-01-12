@@ -3,24 +3,16 @@
 use strict;
 use warnings;
 
-use feature qw(say);
-
-use Data::Dumper;
-use Text::Haml;
-use IO::All;
-
-use Template;
-
+use DDP;
 use YAML qw(LoadFile);
+use IO::All;
+use Template;
+use Text::Haml;
 
+print "Reading new event...\n";
 my $event_ref = LoadFile('new_event.yaml');
 
-my %event     = %$event_ref;
-
-my $month     = $event_ref->{ month };
-my $daynum    = $event_ref->{ daynum };
-my $year      = $event_ref->{ year };
-my $space     = "  ";
+my ( $month, $daynum, $year ) = @{$event_ref}{qw<month daynum year>};
 
 my $text =<<END;
 %h2 Upcoming Events
@@ -30,70 +22,40 @@ my $text =<<END;
 END
 
 my $talks_string;
-for my $key ( keys %{$event_ref->{ talks }} ) {
-    my $talk    = $event_ref->{ talks }->{ $key };
-    my $talk_detail;
-    my $speaker;
-    my $title;
-    if( $talk ) {
-        $speaker    = $talk->{ speaker };
-        $title      = $talk->{ title };
-        my $detail  = $talk->{ detail };
-        if( ref $detail ) {
-            my @detail  = @{$talk->{ detail }};
-
-            for( my $j = 0; $j <= $#detail; $j++ ) {
-                my $line = $detail[ $j ];
-                $talk_detail .= "      %p $line";
-                if( $j != $#detail ) {
-                    $talk_detail .= "\n";
-                }
-            }
-        } else {
-                $talk_detail .= "      %p $detail\n";
-        }
-    } else {
-        last;
-    }
-
-    my $this_talk =<<END;
+foreach my $talk ( @{ $event_ref->{'talks'} } ) {
+    my $speaker = $talk->{'speaker'};
+    my $title   = $talk->{'title'};
+    my $details = join "\n", map "        %p $_", @{ $talk->{'details'} };
+    my $talk    = <<END;
     %li
       %h4
         %span $speaker
         :: $title
-$talk_detail
+$details
 END
 
-    $talks_string .= $this_talk;
+    $talks_string .= $talk;
 }
 
-$text .= $talks_string;
+( $text . $talks_string . io('events.haml')->slurp ) > io('events.haml');
 
-my $events_haml = io('events.haml')->slurp();
-$events_haml = $text.$events_haml;
-io('events.haml')->write( $events_haml );
-
-my $haml = Text::Haml->new( encoding => '');
+my $haml   = Text::Haml->new( encoding => '' );
 my $events = $haml->render_file('events.haml');
 
-my $text_for_events_tt =<<END;
+my $text_for_events_tt = <<END;
 [% WRAPPER root.tt %]
     <h1>Events</h1>
 $events
 [% END %]
 END
 
-io('events.tt')->write( $text_for_events_tt );
-
-my $template_name;
-my $rendered_text;
+$text_for_events_tt > io('events.tt');
 
 ## Render index.tt
 
-my $tt = Template->new ();
-
-$template_name = "index.tt";
-
-$tt->process( $template_name,
-              $event_ref,
-              '../generated/index.html' ) || die $tt->error()."\n";
+my $tt = Template->new();
+$tt->process(
+    'index.tt',
+    $event_ref,
+    '../generated/index.html',
+) or die $tt->error;

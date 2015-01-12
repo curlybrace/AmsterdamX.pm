@@ -1,0 +1,51 @@
+# AmsterdamX.pm
+
+## Creating a new event
+
+### Update `new_event.yaml`
+
+Add the event in `templates/new_event.yaml` with the following fields:
+
+* `month`
+* `day` (monday, tuesday...)
+* `daynum` (day of the month, e.g. 10th, 11th...)
+* `room`
+* `floor`
+* `survey_link`
+* `talks`
+  * `speaker`
+  * `title`
+  * `details`
+    * Paragraph
+    * Paragraph
+
+### Update Upcoming Events
+
+Move text under *Upcoming events* to *Previous events*, in
+`templates/events.haml`.
+
+Remove "Upcoming events" from `templates/events.haml`.
+
+### Configuration file
+
+Create a configuration file `amsterdamx_conf.yaml`.
+
+Add these fields for email and tweet in `amsterdamx_conf.yaml`:
+
+* `host`
+* `port`
+* `username`
+* `password` (if not in the conf file, you will be prompted for it later on)
+* `to` (comma separated list for sending multiple addresses)
+* `from`
+* `consumer_key`
+* `consumer_secret`
+* `access_token`
+* `access_token_secret`
+
+### Make
+
+Run the Makefile.
+
+* `make`: build website.
+* `make announce`: announce on Twitter and mailing lists.

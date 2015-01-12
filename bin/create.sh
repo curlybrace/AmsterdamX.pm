@@ -22,7 +22,6 @@ fi
 pushd templates
 
 "$base"/bin/render_events.pl
-"$base"/bin/send_email_and_tweets.pl "$HOME"/amsterdamx_conf.yaml
 
 pages_list="about events"
 
