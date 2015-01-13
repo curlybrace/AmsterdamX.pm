@@ -48,12 +48,12 @@ my %options = (
 );
 
 my $option = -1;
-while ( $option >= 0 && $option <= 3 ) {
-    print "What kind of email you would like to send?\n";
-    print "0. Exit\n";
-    print "1. Announcement\n";
-    print "2. Reminder\n";
-    print "3. Teaser\n";
+while ( $option < 0 || $option > 3 ) {
+    print "What kind of email you would like to send?\n"
+        . "0. Exit\n"
+        . "1. Announcement\n"
+        . "2. Reminder\n"
+        . "3. Teaser\n";
     $option = prompt( 'Pick 0-3:', '0' );
 }
 
