@@ -1,17 +1,20 @@
-month: November
-daynum: 25th
-day: Tuesday
+month: January
+daynum: 20th
+day: 21st
 year: 2014
 room: Beijing
 floor: 5th
-survey: survey_link
+survey: https://www.surveymonkey.com/s/3WHXKQP
 
 talks:
   -
     speaker: Stevan Little
-    title: Is code art?
+    title: Big world, Little Stevan
     details:
-        - Something about code and art.
+        - Revealing truths (without revealing), exposed secrets (without exposing), promises and lies, love and deceit, actions and consequences, mystery and brutal honesty, one word juxtapositioned against another.
+        - Will it be YET ANOTHER FREAKIN' MOP? Will it be a new language I enjoyed working with? Is it The 10 Best Coding Practices of 2014 or The Worst, Most-Shared BuzzFeed Articles I will be covering? The subject of this talk is going to surprise you. Hell, it's going to surprise me!
+        - Join me (or don't) to hear magical stories of enchanted youths fooled by enigmatic and theatrical descriptions in order to attend a still-vaguely-themed talk of a questionable topic.
+        - I will also apologize for not providing talk descriptions ahead of time which made Sawyer X write mine.
 
   -
     speaker: Borislav Nikolov (jackdoe)
@@ -22,13 +25,15 @@ talks:
 
   -
     speaker: Mickey Nasriachi
-    title: MetaCPAN::Client!
+    title: A killer API for a killer feature
     details:
-        - Something about MetaCPAN::Client.
+        - CPAN is Perl's killer feature.
+        - The information available in CPAN is massive, but without a proper API, it's difficult to work with.
+        - MetaCPAN provides this API, and MetaCPAN::Client provides the ability to work with the API in a sophisticated and comfortable way.
 
   -
     speaker: Sawyer X
-    title: "Modern web scrapping"
+    title: Modern web scrapping
     details:
         - Web scrapping is fun. It makes data accessible, works around API limits, and makes us feel like gods.
-        - Web::Query and a bunch of other cool stuff we can do with it.
+        - I'll show Web::Query, a module I joyfully started using recently in my scrapping, and few examples on stuff I've scrapped with it.
