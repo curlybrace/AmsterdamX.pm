@@ -1,7 +1,7 @@
 This [% month %] we're getting lots of amazing speakers. Don't miss it!
 
 Please also fill in the following form if you intend to come:
-$survey
+[% survey %]
 
 In a nutshell:
 Date: [% daynum %], [% month %] [% day %].
@@ -9,9 +9,9 @@ Time: 18:30 - 20:30 (theoretically)
 Location: Booking.com, Herengracht 597, [% room %] room on [% floor %] floor.
 
 Talks:
-[% FOREACH key IN talks.keys %]
-[% talks.$key.speaker %] - [% talks.$key.title %]
-[% FOREACH line IN talks.$key.detail %]
+[% FOREACH talk IN talks %]
+[% talk.speaker %] - [% talk.title %]
+[% FOREACH line IN talk.details %]
 [% line %]
 [% END %]
 [% END %]
