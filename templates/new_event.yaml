@@ -1,39 +1,42 @@
-month: January
-daynum: 20th
-day: Tuesday
+month: March
+daynum: 30th
+day: Monday
 year: 2015
 room: Beijing
 floor: 5th
-survey: https://www.surveymonkey.com/s/3WHXKQP
+survey: https://nl.surveymonkey.com/s/WBZFCZZ
 
 talks:
   -
-    speaker: Stevan Little
-    title: Big world, Little Stevan
+    speaker: Abigail
+    title: Sharding a database
     details:
-        - Revealing truths (without revealing), exposed secrets (without exposing), promises and lies, love and deceit, actions and consequences, mystery and brutal honesty, one word juxtapositioned against another.
-        - Will it be YET ANOTHER FREAKIN' MOP? Will it be a new language I enjoyed working with? Is it The 10 Best Coding Practices of 2014 or The Worst, Most-Shared BuzzFeed Articles I will be covering? The subject of this talk is going to surprise you. Hell, it's going to surprise me!
-        - Join me (or don't) to hear magical stories of enchanted youths fooled by enigmatic and theatrical descriptions in order to attend a still-vaguely-themed talk of a questionable topic.
-        - I will also apologize for not providing talk descriptions ahead of time which made Sawyer X write mine.
-
-  -
-    speaker: Borislav Nikolov (jackdoe)
-    title: Extreme (Elastic)Search
-    details:
-      - "This is a story about search, distributed systems, complexity, tackling extreme conditions, and about which decisions we made at Booking.com to make it work."
-      - "P.S.: The talk has almost nothing to do with Perl."
-
-  -
-    speaker: Mickey Nasriachi
-    title: A killer API for a killer feature
-    details:
-        - CPAN is Perl's killer feature.
-        - The information available in CPAN is massive, but without a proper API, it's difficult to work with.
-        - MetaCPAN provides this API, and MetaCPAN::Client provides the ability to work with the API in a sophisticated and comfortable way.
+        - When an organization grows, the database(s) it may reach a point where it will be reaching one or more of its resource limits. Action will be needed, and one of the solutions is to use a sharded setup; that is, having several databases with identical structure, and data residing in one (or subset) of the databases.
+        - At Booking.com, we have several sharded databases. In this talk, we will look how we transformed a highly volatile database to a sharded setup, without its users noticing and how Perl helped us to achieve this.
 
   -
     speaker: Sawyer X
-    title: Modern web scrapping
+    title: Dancer2 best practices
     details:
-        - Web scrapping is fun. It makes data accessible, works around API limits, and makes us feel like gods.
-        - I'll show Web::Query, a module I joyfully started using recently in my scrapping, and few examples on stuff I've scrapped with it.
+      - You're probably doing it wrong and don't want to read a bunch of articles. Here's the summary with plenty of code examples instead.
+
+  -
+    speaker: Andrew Shitov
+    title: Approaching the Perl 6 Grammars
+    details:
+      - There will be no slides in this presentation. It will be one big live demo. During the talk we will create a mini compiler for the mini language using the Perl 6 grammars.
+      - Along the talk, elements of the new syntax and concepts available in Perl 6 will be emphasised when needed.
+      - Also, this is to demonstrate that today's Perl 6 can be used and debugged in real time.
+
+  -
+    speaker: Theo Van Hoessel
+    title: Do you speak-a my language?
+    details:
+        - HTTP-Authoring, REST APIs in a multilingual environment
+
+  -
+    speaker: Stevan Little
+    title: Designing with Roles
+    details:
+        - Roles (originally called Traits) are a concept that originated in research being done into better OO design practices using the Smalltalk language. Early in the Perl 6 design process Roles were added to the language and have since become an integral part of Perl 6. The idea of roles were also adopted by the Perl 5 community, which has many implementations of them, including Moose::Role, Moo::Role, Role::Tiny and more.
+        - In this talk, we will discuss some of the core concepts of roles and how they fit into and augment the normal OO design process. We will also spend some time looking at some of the well established patterns of Role usage, discussing the pros and cons of each approach.
