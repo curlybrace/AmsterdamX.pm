@@ -1,42 +1,34 @@
-month: March
-daynum: 30th
-day: Monday
+month: April
+daynum: 29th
+day: Wednesday
 year: 2015
 room: Beijing
 floor: 5th
-survey: https://nl.surveymonkey.com/s/WBZFCZZ
+survey: https://nl.surveymonkey.com/s/5PWCMVT
 
 talks:
   -
-    speaker: Abigail
-    title: Sharding a database
+    speaker: Stevan Little
+    title: Surprise talk
     details:
-        - When an organization grows, the database(s) it may reach a point where it will be reaching one or more of its resource limits. Action will be needed, and one of the solutions is to use a sharded setup; that is, having several databases with identical structure, and data residing in one (or subset) of the databases.
-        - At Booking.com, we have several sharded databases. In this talk, we will look how we transformed a highly volatile database to a sharded setup, without its users noticing and how Perl helped us to achieve this.
+      - Secret!
 
   -
-    speaker: Sawyer X
-    title: Dancer2 best practices
+    speaker: Mattia Barbon
+    title: Devel::StatProfiler: lightweight profiling of production systems
     details:
-      - You're probably doing it wrong and don't want to read a bunch of articles. Here's the summary with plenty of code examples instead.
+      - Profiling is like the crack cocaine of programming -- Tim Bunce
+      - Now you can cook your own profiling data, directly on your production systems!
 
   -
     speaker: Andrew Shitov
-    title: Approaching the Perl 6 Grammars
+    title: Parallel Features of Perl 6
     details:
-      - There will be no slides in this presentation. It will be one big live demo. During the talk we will create a mini compiler for the mini language using the Perl 6 grammars.
-      - Along the talk, elements of the new syntax and concepts available in Perl 6 will be emphasised when needed.
-      - Also, this is to demonstrate that today's Perl 6 can be used and debugged in real time.
+      - I'd like to talk about things for parallel computing, which are available in the Perl 6 language. The long-lasting design process made these features so syntactically simple that it's not always possible to instantly understand the real power of them. I'd like to share my current understanding of what we've got in Perl 6 today.
 
   -
-    speaker: Theo Van Hoessel
-    title: Do you speak-a my language?
+    speaker: Ben Tyler
+    title: Mojo::Pg and managing callbacks with Mojo::IOLoop::Delay
     details:
-        - HTTP-Authoring, REST APIs in a multilingual environment
+      - "Still feeling Node.js envy? Looking longingly at the Go master class at YAPC::NA? Wait! Perl has you covered! Mojo::Pg is a lovely little wrapper around the asynchronous bits of DBD::Pg: it allows your web app to serve other requests while the database is crunching on that hairy query with fifteen JOINs. When combined with the world's tiniest callback manager (Mojo::IOLoop::Delay), you end up with a set of tools for writing sane async web applications without overflowing the right margin of your editor. Good times!"
 
-  -
-    speaker: Stevan Little
-    title: Designing with Roles
-    details:
-        - Roles (originally called Traits) are a concept that originated in research being done into better OO design practices using the Smalltalk language. Early in the Perl 6 design process Roles were added to the language and have since become an integral part of Perl 6. The idea of roles were also adopted by the Perl 5 community, which has many implementations of them, including Moose::Role, Moo::Role, Role::Tiny and more.
-        - In this talk, we will discuss some of the core concepts of roles and how they fit into and augment the normal OO design process. We will also spend some time looking at some of the well established patterns of Role usage, discussing the pros and cons of each approach.
