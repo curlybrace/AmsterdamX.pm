@@ -1,25 +1,3 @@
-%h2 Upcoming Events
-%div
-  %h3 June 29th, 2015
-  %ol
-    %li
-      %h4
-        %span Maxim Veuts
-        :: Warm and fuzzy text matching
-        %p I had a problem: got two somewhat-structured music playlists that were overlapping and I wanted to merge them together.
-        %p In this talk I will explain what fuzzy text matching is; cover a couple of techniques to do it; and showcase how Text::Fuzzy helped me to solve the problem. Colored terminal examples included.
-    %li
-      %h4
-        %span Peter Rabbitson (Ribasushi)
-        :: From 2D to Tree-D
-        %p This talk will go over the internals of the DBIC rowparser, showcasing a practical example when code generation is useful (and thus justified). This is purely an algorithmic presentation - no knowledge of DBIC or even databases is necessary.
-    %li
-      %h4
-        %span Ben Tyler
-        :: Distributed Systems 102: CRDTs for Poets and Perl Hackers
-        %p In which a humanities major reads a bunch of papers on distributed systems theory and attempts to explain them in plain language.
-        %p Fortunately, conflict free replicated data types (CRDTs) are just a straightforward monotonically increasing join semi-lattice with a least upper bound accomplished by enforcing idempotent and commutative merge functions (producing strong eventual consistency as long as the transport is eventually reliable). No sweat!
-        %p Come learn about conflict free replicated data types, what they can do for you, and why they might be interesting for all kinds of applications, not just for the Amazons and Googles of the world.
 %h2 Previous Events
 %div
   %h3 April 29th, 2015
@@ -28,23 +6,23 @@
       %h4
         %span Stevan Little
         :: Surprise talk
-        %p Secret!
+      %p Secret!
     %li
       %h4
         %span Mattia Barbon
         :: Devel::StatProfiler: lightweight profiling of production systems
-        %p Profiling is like the crack cocaine of programming -- Tim Bunce
-        %p Now you can cook your own profiling data, directly on your production systems!
+      %p Profiling is like the crack cocaine of programming -- Tim Bunce
+      %p Now you can cook your own profiling data, directly on your production systems!
     %li
       %h4
         %span Andrew Shitov
         :: Parallel Features of Perl 6
-        %p I'd like to talk about things for parallel computing, which are available in the Perl 6 language. The long-lasting design process made these features so syntactically simple that it's not always possible to instantly understand the real power of them. I'd like to share my current understanding of what we've got in Perl 6 today.
+      %p I'd like to talk about things for parallel computing, which are available in the Perl 6 language. The long-lasting design process made these features so syntactically simple that it's not always possible to instantly understand the real power of them. I'd like to share my current understanding of what we've got in Perl 6 today.
     %li
       %h4
         %span Ben Tyler
         :: Mojo::Pg and managing callbacks with Mojo::IOLoop::Delay
-        %p Still feeling Node.js envy? Looking longingly at the Go master class at YAPC::NA? Wait! Perl has you covered! Mojo::Pg is a lovely little wrapper around the asynchronous bits of DBD::Pg: it allows your web app to serve other requests while the database is crunching on that hairy query with fifteen JOINs. When combined with the world's tiniest callback manager (Mojo::IOLoop::Delay), you end up with a set of tools for writing sane async web applications without overflowing the right margin of your editor. Good times!
+      %p Still feeling Node.js envy? Looking longingly at the Go master class at YAPC::NA? Wait! Perl has you covered! Mojo::Pg is a lovely little wrapper around the asynchronous bits of DBD::Pg: it allows your web app to serve other requests while the database is crunching on that hairy query with fifteen JOINs. When combined with the world's tiniest callback manager (Mojo::IOLoop::Delay), you end up with a set of tools for writing sane async web applications without overflowing the right margin of your editor. Good times!
 %div
   %h3 March 30th, 2015
   %ol
@@ -52,31 +30,31 @@
       %h4
         %span Abigail
         :: Sharding a database
-        %p When an organization grows, the database(s) it may reach a point where it will be reaching one or more of its resource limits. Action will be needed, and one of the solutions is to use a sharded setup; that is, having several databases with identical structure, and data residing in one (or subset) of the databases.
-        %p At Booking.com, we have several sharded databases. In this talk, we will look how we transformed a highly volatile database to a sharded setup, without its users noticing and how Perl helped us to achieve this.
+      %p When an organization grows, the database(s) it may reach a point where it will be reaching one or more of its resource limits. Action will be needed, and one of the solutions is to use a sharded setup; that is, having several databases with identical structure, and data residing in one (or subset) of the databases.
+      %p At Booking.com, we have several sharded databases. In this talk, we will look how we transformed a highly volatile database to a sharded setup, without its users noticing and how Perl helped us to achieve this.
     %li
       %h4
         %span Sawyer X
         :: Dancer2 best practices
-        %p You're probably doing it wrong and don't want to read a bunch of articles. Here's the summary with plenty of code examples instead.
+      %p You're probably doing it wrong and don't want to read a bunch of articles. Here's the summary with plenty of code examples instead.
     %li
       %h4
         %span Andrew Shitov
         :: Approaching the Perl 6 Grammars
-        %p There will be no slides in this presentation. It will be one big live demo. During the talk we will create a mini compiler for the mini language using the Perl 6 grammars.
-        %p Along the talk, elements of the new syntax and concepts available in Perl 6 will be emphasised when needed.
-        %p Also, this is to demonstrate that today's Perl 6 can be used and debugged in real time.
+      %p There will be no slides in this presentation. It will be one big live demo. During the talk we will create a mini compiler for the mini language using the Perl 6 grammars.
+      %p Along the talk, elements of the new syntax and concepts available in Perl 6 will be emphasised when needed.
+      %p Also, this is to demonstrate that today's Perl 6 can be used and debugged in real time.
     %li
       %h4
         %span Theo Van Hoessel
         :: Do you speak-a my language?
-        %p HTTP-Authoring, REST APIs in a multilingual environment
+      %p HTTP-Authoring, REST APIs in a multilingual environment
     %li
       %h4
         %span Stevan Little
         :: Designing with Roles
-        %p Roles (originally called Traits) are a concept that originated in research being done into better OO design practices using the Smalltalk language. Early in the Perl 6 design process Roles were added to the language and have since become an integral part of Perl 6. The idea of roles were also adopted by the Perl 5 community, which has many implementations of them, including Moose::Role, Moo::Role, Role::Tiny and more.
-        %p In this talk, we will discuss some of the core concepts of roles and how they fit into and augment the normal OO design process. We will also spend some time looking at some of the well established patterns of Role usage, discussing the pros and cons of each approach.
+      %p Roles (originally called Traits) are a concept that originated in research being done into better OO design practices using the Smalltalk language. Early in the Perl 6 design process Roles were added to the language and have since become an integral part of Perl 6. The idea of roles were also adopted by the Perl 5 community, which has many implementations of them, including Moose::Role, Moo::Role, Role::Tiny and more.
+      %p In this talk, we will discuss some of the core concepts of roles and how they fit into and augment the normal OO design process. We will also spend some time looking at some of the well established patterns of Role usage, discussing the pros and cons of each approach.
 %div
   %h3 January 20th, 2015
   %ol
@@ -84,29 +62,29 @@
       %h4
         %span Stevan Little
         :: Big world, Little Stevan
-        %p Revealing truths (without revealing), exposed secrets (without exposing), promises and lies, love and deceit, actions and consequences, mystery and brutal honesty, one word juxtapositioned against another.
-        %p Will it be YET ANOTHER FREAKIN' MOP? Will it be a new language I enjoyed working with? Is it The 10 Best Coding Practices of 2014 or The Worst, Most-Shared BuzzFeed Articles I will be covering? The subject of this talk is going to surprise you. Hell, it's going to surprise me!
-        %p Join me (or don't) to hear magical stories of enchanted youths fooled by enigmatic and theatrical descriptions in order to attend a still-vaguely-themed talk of a questionable topic.
+      %p Revealing truths (without revealing), exposed secrets (without exposing), promises and lies, love and deceit, actions and consequences, mystery and brutal honesty, one word juxtapositioned against another.
+      %p Will it be YET ANOTHER FREAKIN' MOP? Will it be a new language I enjoyed working with? Is it The 10 Best Coding Practices of 2014 or The Worst, Most-Shared BuzzFeed Articles I will be covering? The subject of this talk is going to surprise you. Hell, it's going to surprise me!
+      %p Join me (or don't) to hear magical stories of enchanted youths fooled by enigmatic and theatrical descriptions in order to attend a still-vaguely-themed talk of a questionable topic.
         %p I will also apologize for not providing talk descriptions ahead of time which made Sawyer X write mine.
     %li
       %h4
         %span Borislav Nikolov (jackdoe)
         :: Extreme (Elastic)Search
-        %p This is a story about search, distributed systems, complexity, tackling extreme conditions, and about which decisions we made at Booking.com to make it work.
-        %p P.S.: The talk has almost nothing to do with Perl.
+      %p This is a story about search, distributed systems, complexity, tackling extreme conditions, and about which decisions we made at Booking.com to make it work.
+      %p P.S.: The talk has almost nothing to do with Perl.
     %li
       %h4
         %span Mickey Nasriachi
         :: A killer API for a killer feature
-        %p CPAN is Perl's killer feature.
-        %p The information available in CPAN is massive, but without a proper API, it's difficult to work with.
-        %p MetaCPAN provides this API, and MetaCPAN::Client provides the ability to work with the API in a sophisticated and comfortable way.
+      %p CPAN is Perl's killer feature.
+      %p The information available in CPAN is massive, but without a proper API, it's difficult to work with.
+      %p MetaCPAN provides this API, and MetaCPAN::Client provides the ability to work with the API in a sophisticated and comfortable way.
     %li
       %h4
         %span Sawyer X
         :: Modern web scrapping
-        %p Web scrapping is fun. It makes data accessible, works around API limits, and makes us feel like gods.
-        %p I'll show Web::Query, a module I joyfully started using recently in my scrapping, and few examples on stuff I've scrapped with it.
+      %p Web scrapping is fun. It makes data accessible, works around API limits, and makes us feel like gods.
+      %p I'll show Web::Query, a module I joyfully started using recently in my scrapping, and few examples on stuff I've scrapped with it.
 %div
   %h3 November 25th, 2014
   %ol
@@ -114,25 +92,25 @@
       %h4
         %span H.Merijn Brand (tux)
         :: What I miss in "pack" and "unpack"
-        %p Pack and unpack enable us to view binary data as structured data. Using advanced patterns, these data chunks might even be perceived as dynamic data sources. There is one drawback on the implementation of unpack in the CORE: it only works on scalar values.
-        %p I will not show you how it can be done (that will be quite an job), but I will try to show you how code could change if unpack were to work on data streams as well. I'll use PerlMonk posts as examples, though my original idea came from something I'll also show.
-        %p I hope this will be some kind of interactive, and there will be a discussion on weather this is a useful feature to implement. It will not be a slick slideshow.
+      %p Pack and unpack enable us to view binary data as structured data. Using advanced patterns, these data chunks might even be perceived as dynamic data sources. There is one drawback on the implementation of unpack in the CORE: it only works on scalar values.
+      %p I will not show you how it can be done (that will be quite an job), but I will try to show you how code could change if unpack were to work on data streams as well. I'll use PerlMonk posts as examples, though my original idea came from something I'll also show.
+      %p I hope this will be some kind of interactive, and there will be a discussion on weather this is a useful feature to implement. It will not be a slick slideshow.
     %li
       %h4
         %span Damien Krotkine (dams)
         :: Exceptions with no strings attached
-        %p Perl exceptions can be anything, as long as they are scalars. This bring issues. Exception::Stringy aims to fix that
+      %p Perl exceptions can be anything, as long as they are scalars. This bring issues. Exception::Stringy aims to fix that
     %li
       %h4
         %span Peter Rabbitson (ribasushi)
         :: DBIx::Class - what is it and what is it good for?
-        %p DBIx::Class is a widely used and just as widely misunderstood SQL metaprogramming framework (no, it is not an ORM, it just plays one on TV).
-        %p Come to see the primary maintainer of DBIx::Class (a.k.a. DBIC) give an overview of its architecture, show some more advanced use cases where the library really shines, and generally rant about the sorry state of the RDBMS universe. ;)
+      %p DBIx::Class is a widely used and just as widely misunderstood SQL metaprogramming framework (no, it is not an ORM, it just plays one on TV).
+      %p Come to see the primary maintainer of DBIx::Class (a.k.a. DBIC) give an overview of its architecture, show some more advanced use cases where the library really shines, and generally rant about the sorry state of the RDBMS universe. ;)
     %li
       %h4
         %span Stevan Little
         :: Plack::Debugger: A new debugger for Plack Applications
-        %p Plack::Debugger is a newly released addition to the Plack toolbox. It is a rethinking of the excellent Plack::Middleware::Debug module designed specifically to work with the AJAX heavy web applications of today. This talk will provide an overview of the straight-out-of-the-box functionality this module provides, as well as examples of how to extend it for your particular environment.
+      %p Plack::Debugger is a newly released addition to the Plack toolbox. It is a rethinking of the excellent Plack::Middleware::Debug module designed specifically to work with the AJAX heavy web applications of today. This talk will provide an overview of the straight-out-of-the-box functionality this module provides, as well as examples of how to extend it for your particular environment.
 %div
   %h3 September 30th, 2014
   %ol
