@@ -8,7 +8,7 @@ survey: https://nl.surveymonkey.com/r/CYQDBNC
 
 talks:
   -
-    speaker: Maxim Veuts
+    speaker: Maxim Vuets
     title: Warm and fuzzy text matching
     details:
       - "I had a problem: got two somewhat-structured music playlists that were overlapping and I wanted to merge them together."
