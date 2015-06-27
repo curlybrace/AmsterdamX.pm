@@ -22,7 +22,7 @@ my ($conf_file) = @ARGV
     or die "Usage: perl send_email_and_tweets.pl <config.yaml>\n";
 
 # Read event details
-my $event_ref = LoadFile('new_event.yaml');
+my $event_ref = LoadFile('templates/new_event.yaml');
 
 my ( $month, $daynum ) = @{$event_ref}{qw<month daynum>};
 
@@ -65,7 +65,7 @@ my $email_body;
 
 my $tt = Template->new();
 $tt->process(
-    "email_templates/$template_name",
+    "templates/email_templates/$template_name",
     $event_ref,
     \$email_body,
 ) or die $tt->error();
