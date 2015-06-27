@@ -1,34 +1,29 @@
-month: April
+month: June
 daynum: 29th
-day: Wednesday
+day: Monday
 year: 2015
-room: Beijing
-floor: 5th
-survey: https://nl.surveymonkey.com/s/5PWCMVT
+room: Monaco
+floor: 1st
+survey: https://nl.surveymonkey.com/r/CYQDBNC
 
 talks:
   -
-    speaker: Stevan Little
-    title: Surprise talk
+    speaker: Maxim Veuts
+    title: Warm and fuzzy text matching
     details:
-      - Secret!
+      - "I had a problem: got two somewhat-structured music playlists that were overlapping and I wanted to merge them together."
+      - In this talk I will explain what fuzzy text matching is; cover a couple of techniques to do it; and showcase how Text::Fuzzy helped me to solve the problem. Colored terminal examples included.
 
   -
-    speaker: Mattia Barbon
-    title: Devel::StatProfiler: lightweight profiling of production systems
+    speaker: Peter Rabbitson (Ribasushi)
+    title: From 2D to Tree-D
     details:
-      - Profiling is like the crack cocaine of programming -- Tim Bunce
-      - Now you can cook your own profiling data, directly on your production systems!
-
-  -
-    speaker: Andrew Shitov
-    title: Parallel Features of Perl 6
-    details:
-      - I'd like to talk about things for parallel computing, which are available in the Perl 6 language. The long-lasting design process made these features so syntactically simple that it's not always possible to instantly understand the real power of them. I'd like to share my current understanding of what we've got in Perl 6 today.
+      - This talk will go over the internals of the DBIC rowparser, showcasing a practical example when code generation is useful (and thus justified). This is purely an algorithmic presentation - no knowledge of DBIC or even databases is necessary.
 
   -
     speaker: Ben Tyler
-    title: Mojo::Pg and managing callbacks with Mojo::IOLoop::Delay
+    title: Distributed Systems 102: CRDTs for Poets and Perl Hackers
     details:
-      - "Still feeling Node.js envy? Looking longingly at the Go master class at YAPC::NA? Wait! Perl has you covered! Mojo::Pg is a lovely little wrapper around the asynchronous bits of DBD::Pg: it allows your web app to serve other requests while the database is crunching on that hairy query with fifteen JOINs. When combined with the world's tiniest callback manager (Mojo::IOLoop::Delay), you end up with a set of tools for writing sane async web applications without overflowing the right margin of your editor. Good times!"
-
+      - In which a humanities major reads a bunch of papers on distributed systems theory and attempts to explain them in plain language.
+      - Fortunately, conflict free replicated data types (CRDTs) are just a straightforward monotonically increasing join semi-lattice with a least upper bound accomplished by enforcing idempotent and commutative merge functions (producing strong eventual consistency as long as the transport is eventually reliable). No sweat!
+      - Come learn about conflict free replicated data types, what they can do for you, and why they might be interesting for all kinds of applications, not just for the Amazons and Googles of the world.

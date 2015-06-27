@@ -1,5 +1,27 @@
 %h2 Upcoming Events
 %div
+  %h3 June 29th, 2015
+  %ol
+    %li
+      %h4
+        %span Maxim Veuts
+        :: Warm and fuzzy text matching
+        %p I had a problem: got two somewhat-structured music playlists that were overlapping and I wanted to merge them together.
+        %p In this talk I will explain what fuzzy text matching is; cover a couple of techniques to do it; and showcase how Text::Fuzzy helped me to solve the problem. Colored terminal examples included.
+    %li
+      %h4
+        %span Peter Rabbitson (Ribasushi)
+        :: From 2D to Tree-D
+        %p This talk will go over the internals of the DBIC rowparser, showcasing a practical example when code generation is useful (and thus justified). This is purely an algorithmic presentation - no knowledge of DBIC or even databases is necessary.
+    %li
+      %h4
+        %span Ben Tyler
+        :: Distributed Systems 102: CRDTs for Poets and Perl Hackers
+        %p In which a humanities major reads a bunch of papers on distributed systems theory and attempts to explain them in plain language.
+        %p Fortunately, conflict free replicated data types (CRDTs) are just a straightforward monotonically increasing join semi-lattice with a least upper bound accomplished by enforcing idempotent and commutative merge functions (producing strong eventual consistency as long as the transport is eventually reliable). No sweat!
+        %p Come learn about conflict free replicated data types, what they can do for you, and why they might be interesting for all kinds of applications, not just for the Amazons and Googles of the world.
+%h2 Previous Events
+%div
   %h3 April 29th, 2015
   %ol
     %li
@@ -23,7 +45,6 @@
         %span Ben Tyler
         :: Mojo::Pg and managing callbacks with Mojo::IOLoop::Delay
         %p Still feeling Node.js envy? Looking longingly at the Go master class at YAPC::NA? Wait! Perl has you covered! Mojo::Pg is a lovely little wrapper around the asynchronous bits of DBD::Pg: it allows your web app to serve other requests while the database is crunching on that hairy query with fifteen JOINs. When combined with the world's tiniest callback manager (Mojo::IOLoop::Delay), you end up with a set of tools for writing sane async web applications without overflowing the right margin of your editor. Good times!
-%h2 Previous Events
 %div
   %h3 March 30th, 2015
   %ol
