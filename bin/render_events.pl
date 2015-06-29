@@ -25,7 +25,7 @@ my $talks_string;
 foreach my $talk ( @{ $event_ref->{'talks'} } ) {
     my $speaker = $talk->{'speaker'};
     my $title   = $talk->{'title'};
-    my $details = join "\n", map "        %p $_", @{ $talk->{'details'} };
+    my $details = join "\n", map "      %p $_", @{ $talk->{'details'} };
     my $talk    = <<END;
     %li
       %h4
