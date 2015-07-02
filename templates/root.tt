@@ -24,7 +24,7 @@
     <!-- still need: under IE9 stylesheet, print stylesheet -->
   </head>
   <body>
-    <nav role="navigation">
+    <nav role="navigation" id="top">
         [% INCLUDE menu.tt %]
     </nav>
     <div class="container">
