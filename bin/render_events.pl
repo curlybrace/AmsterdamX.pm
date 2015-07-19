@@ -5,7 +5,7 @@ use warnings;
 
 use DDP;
 use YAML qw(LoadFile);
-use IO::All;
+use IO::All -utf8; # this is for io function
 use Template;
 use Text::Haml;
 
@@ -39,7 +39,7 @@ END
 
 ( $text . $talks_string . io('events.haml')->slurp ) > io('events.haml');
 
-my $haml   = Text::Haml->new( encoding => '' );
+my $haml   = Text::Haml->new( encoding => 'utf-8' );
 my $events = $haml->render_file('events.haml');
 
 my $text_for_events_tt = <<END;
@@ -58,4 +58,5 @@ $tt->process(
     'index.tt',
     $event_ref,
     '../generated/index.html',
+    binmode => ':utf8'
 ) or die $tt->error;

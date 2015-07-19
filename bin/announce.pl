@@ -18,6 +18,8 @@ use Email::Simple;
 use Email::Sender::Simple 'sendmail';
 use Email::Sender::Transport::SMTP;
 
+use utf8;
+
 my ($conf_file) = @ARGV
     or die "Usage: perl send_email_and_tweets.pl <config.yaml>\n";
 
@@ -68,6 +70,7 @@ $tt->process(
     "templates/email_templates/$template_name",
     $event_ref,
     \$email_body,
+    binmode => ':utf8',
 ) or die $tt->error();
 
 my $transport = Email::Sender::Transport::SMTP->new({
@@ -81,9 +84,10 @@ my $transport = Email::Sender::Transport::SMTP->new({
 
 my $email = Email::Simple->create(
     header => [
-        To      => $to,
-        From    => $from,
-        Subject => $subject,
+        To             => $to,
+        From           => $from,
+        Subject        => $subject,
+        'Content-Type' => "text/plain; charset=utf-8",
     ],
     body   => $email_body,
 );
