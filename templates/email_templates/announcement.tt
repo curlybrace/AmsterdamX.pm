@@ -12,8 +12,9 @@ Talks:
 [% FOREACH talk IN talks %]
 [% talk.speaker %] - [% talk.title %]
 [% FOREACH line IN talk.details %]
-[% line %]
+* [% line %]
 [% END %]
+
 [% END %]
 Unabridged:
 You've probably heard of the Perl Mongers meetings, where fellow Perl (and non-Perl) programmers can get together to "talk shop", make fun of everything (including Perl), and have a good time. These meetings often have a few technical talks (which are usually light-hearted, and not necessarily - but likely - involve Perl). There are already Amsterdam.pm meetings. This is not about those. This is about AmsterdamX.pm.

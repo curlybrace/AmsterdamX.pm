@@ -1,29 +1,29 @@
-month: June
-daynum: 29th
+month: July
+daynum: 27th
 day: Monday
 year: 2015
 room: Monaco
 floor: 1st
-survey: https://nl.surveymonkey.com/r/CYQDBNC
+survey: https://nl.surveymonkey.com/r/CG2R78Z
 
 talks:
   -
+    speaker: Eli Abramovitch
+    title: Breathing life into perl with an Intellij Plugin
+    details:
+      - We all love perl and it's been long overdue to have a decent IDE to support it.
+      - In order to make our coding life more easier and attract more new developers - we created Perl Intellij Plugin.
+      - In this talk I will demonstrate the plugin benefits and how it contributes to the daily life of a Perl hacker.
+
+  -
+    speaker: Mathias Rørbo Jessen
+    title: PowerShell - Next-level Automation in Windows-land
+    details:
+      - Since late 2006, a new scripting language has come to dominate the way IT Pros manage Windows-centric environments. What is PowerShell, where did it come from, does it bring anything new to the table and what's up with the weird mix of C# and Perl-like syntax? This talk will try to answer some of those question!
+
+  -
     speaker: Maxim Vuets
-    title: Warm and fuzzy text matching
+    title: Processing toki pona with Perl
     details:
-      - "I had a problem: got two somewhat-structured music playlists that were overlapping and I wanted to merge them together."
-      - In this talk I will explain what fuzzy text matching is; cover a couple of techniques to do it; and showcase how Text::Fuzzy helped me to solve the problem. Colored terminal examples included.
-
-  -
-    speaker: Peter Rabbitson (Ribasushi)
-    title: From 2D to Tree-D
-    details:
-      - This talk will go over the internals of the DBIC rowparser, showcasing a practical example when code generation is useful (and thus justified). This is purely an algorithmic presentation - no knowledge of DBIC or even databases is necessary.
-
-  -
-    speaker: Ben Tyler
-    title: Distributed Systems 102: CRDTs for Poets and Perl Hackers
-    details:
-      - In which a humanities major reads a bunch of papers on distributed systems theory and attempts to explain them in plain language.
-      - Fortunately, conflict free replicated data types (CRDTs) are just a straightforward monotonically increasing join semi-lattice with a least upper bound accomplished by enforcing idempotent and commutative merge functions (producing strong eventual consistency as long as the transport is eventually reliable). No sweat!
-      - Come learn about conflict free replicated data types, what they can do for you, and why they might be interesting for all kinds of applications, not just for the Amazons and Googles of the world.
+      - Toki pona is a constructed language, it strives for making the world simple. Perl is a programming language, it's known to be good at text processing (mangling? cruching?). They both are good, TIMTOWTDI, fun and intensively rely on context.
+      - In this talk I want to take Perl to the next level and demonstrate how it can be applied for language processing (mangling? crunching?) using toki pona as an example. We will take a look at parsing free-form text with a help of Marpa and writting a rubbish generator with the help of Markov chains.
