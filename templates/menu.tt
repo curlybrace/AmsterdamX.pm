@@ -1,6 +1,6 @@
 <ul>
-  <li><a[% page == 'home'   ? ' class="current"' : '' %] href="/">Home</a></li
+  <li><a[% page == ''   ? ' class="current"' : '' %] href="/">Home</a></li
   ><li><a[% page == 'events' ? ' class="current"' : '' %] href="events.html">Events</a></li
   ><li><a href="#footer">About</a></li
   ><li><a href="https://www.youtube.com/channel/UCqVaoUlQ7PLQ0LA19p3HxTw">Videos</a></li
-></ul><span class="hidden">[% page %]</span>
+></ul>

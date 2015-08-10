@@ -98,12 +98,10 @@ else if (document.attachEvent) {
             type: type,
             listener: listener,
             listener2: listener2
-        };
-
-        var targetDocument = target.document || target;
-        var targetWindow = targetDocument.parentWindow;
-        
-        var listenerId = 'l' + Basis._listenerCounter++;
+            },
+            targetDocument = target.document || target,
+            targetWindow = targetDocument.parentWindow,
+            listenerId = 'l' + Basis._listenerCounter++;
 
         if (!targetWindow._allListeners) {
             targetWindow._allListeners = {};
@@ -127,11 +125,10 @@ else if (document.attachEvent) {
             return;
         }
 
-        var targetDocument = target.document || target;
-        var targetWindow = targetDocument.parentWindow;
-
-        var listenerId = target._listeners[listenerIndex];
-        var listenerRecord = targetWindow._allListeners[listenerId];
+        var targetDocument = target.document || target,
+            targetWindow = targetDocument.parentWindow,
+            listenerId = target._listeners[listenerIndex],
+            listenerRecord = targetWindow._allListeners[listenerId];
 
         target.detachEvent('on' + type, listenerRecord.listener2);
         target._listeners.splice(listenerIndex, 1);
@@ -139,12 +136,14 @@ else if (document.attachEvent) {
         delete targetWindow._allListeners[listenerId];
     };
 
-    Basis.preventDefault = function(event) {
-        event.returnValue = false;
+    Basis.preventDefault=function(evt) {
+        evt=window.event;
+        evt.returnValue=false;
     };
 
-    Basis.stopPropagation = function(event) {
-        event.cancelBubble = true;
+    Basis.stopPropagation=function(evt) {
+        evt=window.event;
+        evt.cancelBubble=true;
     };
 
     Basis._findListener = function(target, type, listener) {
@@ -153,12 +152,12 @@ else if (document.attachEvent) {
             return -1;
         }
 
-        var targetDocument = target.document || target;
-        var targetWindow = targetDocument.parentWindow;
+        var targetDocument = target.document || target,
+            targetWindow = targetDocument.parentWindow;
 
         for (var i = listeners.length - 1; i >= 0; i--) {
-            var listenerId = listeners[i];
-            var listenerRecord = targetWindow._allListeners[listenerId];
+            var listenerId = listeners[i],
+                listenerRecord = targetWindow._allListeners[listenerId];
 
             if (listenerRecord.type == type && listenerRecord.listener == listener) {
                 return i;
@@ -336,11 +335,16 @@ var XXX = {
         area = parseInt(viewportHeight + docTop, 10);
 
         if (area >= footerPos) {
-            Basis.removeClass(currentPage, 'current');
+            //Home has not been current page yet
+            if (currentPage) {
+                Basis.removeClass(currentPage, 'current');
+            }
             Basis.addClass(aboutLink, 'current');
         }
         else {
-            Basis.addClass(currentPage, 'current');
+            if (currentPage) {
+                Basis.addClass(currentPage, 'current');
+            }
             Basis.removeClass(aboutLink, 'current');
         }
     }
