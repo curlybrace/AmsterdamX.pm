@@ -1,34 +1,38 @@
-month: October
-daynum: 26th
+month: November
+daynum: 30th
 day: Monday
 year: 2015
 room: Amsterdam
 floor: 1st
-survey: https://nl.surveymonkey.com/r/XB8PYGM
+survey: https://nl.surveymonkey.com/r/MW6F35X
 
 talks:
   -
-    speaker: Jader Dias
-    title: Parallel Crawler in Perl6 and Go (15 min)
+    speaker: Gonzalo Diethelm
+    title: HTTP::XSHeaders -- reimplementing the interface of HTTP::Headers in C (30 min)
     details:
-      - how a new Perl6 feature can make scheduling new workers during the execution of older ones easier and terser
+      - HTTP::Headers is a library that handles a collection of headers and their values;
+      - this talk presents the fascinating voyage from working but slow(er) Perl code to fast(er) and (almost) working C code.
 
   -
-    speaker: Vikentiy Fesunov
-    title: Writing JIT compiler in Perl (10 min)
+    speaker: Stefan Hornburg (Racke) (30 min)
+    title: DBIx::Class - Can of Worms || Best Thing Since Sliced Bread
     details:
-      - An overview of a project to write a JIT compiler for a simple language in Perl.
+      - DBIx::Class is both a very useful tool for applications using SQL databases and an intimidating piece of software.
+      - You can find comprehensive documentation about DBIx::Class on CPAN, but it is not easy to find the stuff that makes it the best thing since sliced bread.
+      - In this talk we brush through the rough edges of DBIx::Class and look how they can be alleviated with goodies like Candy, Helpers and other amazing add-ons for DBIx::Class.
+      - Also I will make a case why using DBIx::Class is a splendid idea, for example getting rid of embedded SQL, painless database upgrades and keeping the business logic outside of your main applications.
 
   -
-    speaker: Julian Levens
-    title: Proper symlinks for Windows perl (30 min)
+    speaker: Sawyer X
+    title: RFC: Ref::Util: accurate functions in XS for checking references (possibly using custom op codes) (30 min)
     details:
-      - Windows has had hardlinks and junctions for some time (circa 2000). However, you needed to call the Windows API to use them. For perl circa 2004 Win32::Hardlink and Win32::Symlink came to CPAN but as junctions are not symlinks these are not a seamless replacement. Since Vista, Windows has had POSIX compliant symlinks. This talk will cover the development of Win32::Links to transparently support symlinks in Windows perl scripts.
+      - '"ref($ref) eq $ref_type" is very common but inexact. instead, I wrote some functions in XS to do it accurately. What? XS? How? Let me show you.'
 
   -
     speaker: Maxim Vuets
-    title: very iterators. so lazy. amaze! (20 min)
+    title: Quack quack o< (5 min)
     details:
-      - An iterator is a neat concept to hide complexities of accessing a data collection behind a simple interface. Moreover it enables one to benefit from lazy evaluation, modular code design, and code-as-data.
-      - In this talk I want to refresh your memory on Perl built-in iterators and closures. Then take an iterator-less example of code and step-by-step bring it to an iterator-ful shape.
-      - Don't be hold off by all the buzz words---I'll have kittens!
+      - "**duck**¹ /dʌk/"
+      - _noun_
+      - A waterbird with a broad blunt bill, short legs, webbed feet, and a waddling gait.
