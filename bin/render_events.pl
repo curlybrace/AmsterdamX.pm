@@ -25,7 +25,11 @@ my $talks_string;
 foreach my $talk ( @{ $event_ref->{'talks'} } ) {
     my $speaker = $talk->{'speaker'};
     my $title   = $talk->{'title'};
-    my $details = join "\n", map "      %p $_", @{ $talk->{'details'} };
+    my $details = join "\n", map {
+        my $detail = $_;
+        $detail =~ s!(/.+/)!$1;!g;
+        "      %p $detail";
+    } @{ $talk->{'details'} };
     my $talk    = <<END;
     %li
       %h4
@@ -40,7 +44,22 @@ END
 ( $text . $talks_string . io('events.haml')->slurp ) > io('events.haml');
 
 my $haml   = Text::Haml->new( encoding => 'utf-8' );
-my $events = $haml->render_file('events.haml');
+$haml->escape(<<'EOF');
+    my $s = shift;
+    return unless defined $s;
+    $s =~ s/&/&amp;/g;
+    $s =~ s/</&lt;/g;
+    $s =~ s/>/&gt;/g;
+    $s =~ s/"/&quot;/g;
+    $s =~ s/'/&apos;/g;
+    $s =~ s!(/.+/);!$1!g;
+    return $s;
+EOF
+my $events;
+$events = $haml->render_file('events.haml');
+if( $haml->error ) {
+    print STDERR $haml->error;
+}
 
 my $text_for_events_tt = <<END;
 [% WRAPPER root.tt %]
