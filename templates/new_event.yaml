@@ -28,11 +28,3 @@ talks:
     title: RFC: Ref::Util: accurate functions in XS for checking references (possibly using custom op codes) (30 min)
     details:
       - '"ref($ref) eq $ref_type" is very common but inexact. instead, I wrote some functions in XS to do it accurately. What? XS? How? Let me show you.'
-
-  -
-    speaker: Maxim Vuets
-    title: Quack quack o< (5 min)
-    details:
-      - "**duck**¹ /dʌk/"
-      - _noun_
-      - A waterbird with a broad blunt bill, short legs, webbed feet, and a waddling gait.
