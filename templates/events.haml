@@ -1,5 +1,38 @@
 %h2 Upcoming Events
 %div
+  %h3 January 25th, 2016
+  %ol
+    %li
+      %h4
+        %span Mickey Nasriachi
+        :: PONAPI - The anti-bikeshedding tool for your REST API
+      %p Tired of arguing over how JSON responses should be formatted?
+      %p Come to my talk and I'll show you how you can avoid it.
+    %li
+      %h4
+        %span Gonzalo Diethelm
+        :: Devel::QuickCover - Quick & dirty code coverage for Perl
+      %p A lean and mean XS module that gathers runtime code coverage information
+      %p We will briefly describe how Perl uses an optree and how we can hook into it for our own nefarious purposes.
+      %p Then we will discuss the very simple implementation of Devel::QuickCover, which tracks what lines in each loaded Perl module are actually executed.
+      %p The talk will end with some real world instances of using Devel::QuickCover.
+    %li
+      %h4
+        %span Dana Jacobsen
+        :: Practical Cryptography
+      %p This talk will discuss cryptographic hashes, signing with DSA, encrypting with RSA, and random numbers.
+      %p Rather than discussing the theory and the hundreds of modules available, the focus is on a few good tools to get things done.
+    %li
+      %h4
+        %span Vikentiy Fesunov
+        :: Rust inside Perl
+      %p Rust is a new systems language with strong focus on memory safety.
+      %p It tries to help programmers write more correct code with as little runtime overhead as possible.
+      %p XS is an interface used by the perl interpreter to talk to native code, built on top of the C language.
+      %p This project's goal is to bring XS API to Rust and explore ways Rust can make development of well behaved perl extensions simpler.
+%h2 Upcoming Events
+%h2 Previous Events
+%div
   %h3 November 30th, 2015
   %ol
     %li
@@ -21,7 +54,6 @@
         %span Sawyer X
         :: RFC: Ref::Util: accurate functions in XS for checking references (possibly using custom op codes) (30 min)
       %p "ref($ref) eq $ref_type" is very common but inexact. instead, I wrote some functions in XS to do it accurately. What? XS? How? Let me show you.
-%h2 Previous Events
 %div
   %h3 October 26th, 2015
   %ol

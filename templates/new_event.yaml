@@ -1,30 +1,40 @@
-month: November
-daynum: 30th
+month: January
+daynum: 25th
 day: Monday
-year: 2015
+year: 2016
 room: Amsterdam
 floor: 1st
-survey: https://nl.surveymonkey.com/r/MW6F35X
+#survey: https://nl.surveymonkey.com/r/MW6F35X
 
 talks:
   -
+    speaker: Mickey Nasriachi
+    title: PONAPI - The anti-bikeshedding tool for your REST API
+    details:
+      - Tired of arguing over how JSON responses should be formatted?
+      - Come to my talk and I'll show you how you can avoid it.
+
+  -
     speaker: Gonzalo Diethelm
-    title: HTTP::XSHeaders -- reimplementing the interface of HTTP::Headers in C (30 min)
+    title: Devel::QuickCover - Quick & dirty code coverage for Perl
     details:
-      - HTTP::Headers is a library that handles a collection of headers and their values;
-      - this talk presents the fascinating voyage from working but slow(er) Perl code to fast(er) and (almost) working C code.
+      - A lean and mean XS module that gathers runtime code coverage information
+      - We will briefly describe how Perl uses an optree and how we can hook into it for our own nefarious purposes.
+      - Then we will discuss the very simple implementation of Devel::QuickCover, which tracks what lines in each loaded Perl module are actually executed.
+      - The talk will end with some real world instances of using Devel::QuickCover.
 
   -
-    speaker: Stefan Hornburg (Racke) (30 min)
-    title: DBIx::Class - Can of Worms || Best Thing Since Sliced Bread
+    speaker: Dana Jacobsen
+    title: Practical Cryptography
     details:
-      - DBIx::Class is both a very useful tool for applications using SQL databases and an intimidating piece of software.
-      - You can find comprehensive documentation about DBIx::Class on CPAN, but it is not easy to find the stuff that makes it the best thing since sliced bread.
-      - In this talk we brush through the rough edges of DBIx::Class and look how they can be alleviated with goodies like Candy, Helpers and other amazing add-ons for DBIx::Class.
-      - Also I will make a case why using DBIx::Class is a splendid idea, for example getting rid of embedded SQL, painless database upgrades and keeping the business logic outside of your main applications.
+      - This talk will discuss cryptographic hashes, signing with DSA, encrypting with RSA, and random numbers.
+      - Rather than discussing the theory and the hundreds of modules available, the focus is on a few good tools to get things done.
 
   -
-    speaker: Sawyer X
-    title: RFC: Ref::Util: accurate functions in XS for checking references (possibly using custom op codes) (30 min)
+    speaker: Vikentiy Fesunov
+    title: Rust inside Perl
     details:
-      - '"ref($ref) eq $ref_type" is very common but inexact. instead, I wrote some functions in XS to do it accurately. What? XS? How? Let me show you.'
+      - Rust is a new systems language with strong focus on memory safety.
+      - It tries to help programmers write more correct code with as little runtime overhead as possible.
+      - XS is an interface used by the perl interpreter to talk to native code, built on top of the C language.
+      - This project's goal is to bring XS API to Rust and explore ways Rust can make development of well behaved perl extensions simpler.
