@@ -30,7 +30,6 @@
       %p It tries to help programmers write more correct code with as little runtime overhead as possible.
       %p XS is an interface used by the perl interpreter to talk to native code, built on top of the C language.
       %p This project's goal is to bring XS API to Rust and explore ways Rust can make development of well behaved perl extensions simpler.
-%h2 Upcoming Events
 %h2 Previous Events
 %div
   %h3 November 30th, 2015
@@ -224,7 +223,7 @@
       %p Perl exceptions can be anything, as long as they are scalars. This bring issues. Exception::Stringy aims to fix that
     %li
       %h4
-        %span Peter Rabbitson (ribasushi)
+        %span Peter Rabbitson (Ribasushi)
         :: DBIx::Class - what is it and what is it good for?
       %p DBIx::Class is a widely used and just as widely misunderstood SQL metaprogramming framework (no, it is not an ORM, it just plays one on TV).
       %p Come to see the primary maintainer of DBIx::Class (a.k.a. DBIC) give an overview of its architecture, show some more advanced use cases where the library really shines, and generally rant about the sorry state of the RDBMS universe. ;)
@@ -289,6 +288,20 @@
         :: MetaCPAN::API is dead!
       %p MetaCPAN::Client provides the official interface to MetaCPAN's abundance of features and introspection.
       %p Reading the documentation is boring, come to my talk instead!
+  %h3 March 24th, 2014
+  %ol
+    %li
+      %h4
+        %span Simon Bertrang
+        :: Automating Execution, Deployment and Configuration... with Perl!
+      %p In the DevOps world quite some noise is made around configuration management and deployment systems - Perl also has an option in this area: Rex.
+      %p This talk presents how Rex works, shows a few use-cases, gives examples and ideas on how to solve recurring tasks by automating them away.
+    %li
+      %h4
+        %span Sawyer X
+        :: Perl and the Web - A Love Story
+      %p In the beginning of the great kingdom of the Internet, there was one ruler: Perl. With time, fallen from grace, the beautiful princess language lost its place on the throne, giving way to Ruby, Python, and to the dismay and horror of everyone in the kingdom, PHP.
+      %p But all is not lost. While underground, Perl has schemed a plot to overthrow the competitors. That plan is Plack/PSGI.
   %h3 January 28th, 2014
   %ol
     %li
@@ -298,7 +311,104 @@
       %p Every time I write slides I want something different, and each time the tool I used previously does not quite fit the next talk. After having used plain HTML, Magic Point, S5, LibreOffice Impress, and PDF::API2, I'm probably settling on PostScript for some time.
     %li
       %h4
+        %span Peter Rabbitson (Ribasushi)
+        :: Fun with tracking Perl references - going beyond Devel::LeakTrace
+      %p Back in August I presented a half-successful attempt to better auto-test for leaks in the DBIC test suite.
+      %p This time I'll present the final (working) version of this code that is finally on CPAN, and may even be worth extracting as a standalone module.
+  %h3 November 25th, 2013
+  %ol
+    %li
+      %h4
+        %span Rob Hoelz
+        :: Perl Power Tools
+      %p Tools are the unseen force behind programming; they're not the "killer apps" of the world, but they're often instrumental in delivering them.
+      %p Come discover some of the tools that the Perl community has developed over the years to make working with Perl easier.
+    %li
+      %h4
+        %span Kang-Min Liu (Gugod)
+        :: perlbrew, tips and tricks
+      %p perlbrew is a tool to manage multiple perl installations for various purposes.
+      %p I'll briefly go through some basic introduction of the tool and some common usages of perlbrew for development and operational purposes.
+    %li
+      %h4
         %span Sawyer X
-        :: Perl and the Web - A Love Story
-      %p In the beginning of the great kingdom of the Internet, there was one ruler: Perl. With time, fallen from grace, the beautiful princess language lost its place on the throne, giving way to Ruby, Python, and to the dismay and horror of everyone in the kingdom, PHP.
-      %p But all is not lost. While underground, Perl has schemed a plot to overthrow the competitors. That plan is Plack/PSGI.
+        :: do_this() and die;
+      %p If serial killers would use these coding patterns as reasons for their killing sprees we would set them free of charge. Innocent men and women who could not be expected to remain silent in the face of such bothersome behavior.
+      %p I will provide a (hopefully extensive) list of coding patterns I do not like to see, and will urge you to follow me into the righteous path of coding cleanly and understandably.
+      %p This will also shield you as best as possible not to be hurt physically by me when working with me, which - by the end of the talk - you may not wish to do anyway.
+  %h3 October 29th, 2013
+  %ol
+    %li
+      %h4
+        %span Simon Bertrang
+        :: Pipeworks: Pipeline Processing Framework for Perl
+      %p Presentation of a message oriented pipeline processing framework that allows separation of concerns and organization of functional units into small steps.
+      %p The talk explains the concepts, ideas and how it is used in production to make typical cron jobs more testable, maintainable and extensible.
+    %li
+      %h4
+        %span Flávio Glock
+        :: An Introduction to Perlito5
+      %p Perlito5 is the Perl5 compiler in the Perlito compiler collection.
+      %p In this introduction we will discuss some applications of Perlito5, and then go through some of the internals.
+      %ol
+        %li The Perlito project, Perl5 and Perl6 compilers
+        %li Perl 5 to Javascript, running Perl in node.js and browser
+        %li Perl 5 to Perl 6 and automatically refactoring code
+        %li The Very Experimental Stuff - compile to XS, JIT
+        %li Tour of the Perlito source code
+      %p Recommended reading: http://www.i-programmer.info/professional-programmer/i-programmer/5770-perlito-an-interview-with-flavio-glock.html
+    %li
+      %h4
+        %span Damien Krotkine
+        :: Forcing timeouts on sockets (PerlIO, Redis, Riak)
+      %p When using a web service with high expectation on the speed and latency, you often want to abort connection if it's too slow / latency is too high.
+      %p I present a portable way to automatically make a Perl socket aware of read / write timeouts. And I explain why I did that and how.
+  %h3 September 24th, 2013
+  %ol
+    %li
+      %h4
+        %span Steffen Mueller
+        :: Fusing Perl and Lua: presenting PLua
+      %p Interfacing between Perl and Lua as seamlessly and efficiently as unreasonably possible!
+    %li
+      %h4
+        %span Philippe Bruhat (BooK)
+        :: Perl Secret Operators
+      %p Perl is more cryptic than its critics say and more fun than its fans imagine.
+    %li
+      %h4
+        %span Stanislaw Pusep
+        :: Zen and the Art of Yak Grooming
+      %p Which is better: awful tests or no tests at all? What defines a good test suite?
+      %p Software is never born perfect, it evolves. So do tests. Why do we write software in the first place? Is it the same reason that makes us write tests?
+  %h3 August 26th, 2013
+  %ol
+    %li
+      %h4
+        %span Brad Lhotsky
+        :: The Elephant in the Room: PostgreSQL for Perl Programmers
+      %p PostgreSQL shares a lot of common threads with Perl. It's free, open source, extensible, and has a vibrant community.
+      %p We'll compare and contrast Postgres to similar technologies. Then we'll delve into some seriously cool features you won't find in other RDBMS! We'll see how the PostgreSQL community derives inspiration from the Perl Community and how we can help!
+    %li
+      %h4
+        %span Manuel Ceron
+        :: Avoiding Callback Hell in Asynchronous Programming
+      %p Callbacks can lead to messy and hard to read code in asynchronous programming. I will show some ways to overcome these problems using promises, greenlets and other approaches in different programming languages.
+    %li
+      %h4
+        %span Peter Rabbitson (Ribasushi)
+        :: All Your Leaks are Belong to Us
+      %p The quest for reliable leak detection and reporting in a complex project.
+  %h3 July 22nd, 2013
+  %ol
+    %li
+      %h4
+        %span Nicholas Perez
+        :: It's all about the CloudPAN
+      %p Ever wanted to try a module out without installing it? Then CloudPAN might do what you want.
+    %li
+      %h4
+        %span Sawyer X
+        :: Asynchronous programming FTW!
+      %p The new age is all about non-blocking asynchronous creative responsive deconstructive refactored decoupled conjectured applications. If you're not on the event loop wagon loop, you're missing out!
+      %p What the hell am I talking about? Am I just drunk? How many of the above words are totally made-up? These questions and more will be answered at this talk!
