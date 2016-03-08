@@ -1,40 +1,30 @@
-month: January
-daynum: 25th
-day: Monday
+month: March
+daynum: 22nd
+day: Tuesday
 year: 2016
 room: Amsterdam
 floor: 1st
-#survey: https://nl.surveymonkey.com/r/MW6F35X
+survey:  https://www.surveymonkey.co.uk/r/LVGC2M6
 
 talks:
   -
-    speaker: Mickey Nasriachi
-    title: PONAPI - The anti-bikeshedding tool for your REST API
+    speaker: James Laver
+    title: Not Your Grandad's C++
     details:
-      - Tired of arguing over how JSON responses should be formatted?
-      - Come to my talk and I'll show you how you can avoid it.
+      - Build Your Own Modern C++
 
   -
-    speaker: Gonzalo Diethelm
-    title: Devel::QuickCover - Quick & dirty code coverage for Perl
+    speaker: Frederico Recsky
+    title: Translate Perl to Javascript
     details:
-      - A lean and mean XS module that gathers runtime code coverage information
-      - We will briefly describe how Perl uses an optree and how we can hook into it for our own nefarious purposes.
-      - Then we will discuss the very simple implementation of Devel::QuickCover, which tracks what lines in each loaded Perl module are actually executed.
-      - The talk will end with some real world instances of using Devel::QuickCover.
+      - Using Perlito "perl dialect", we translate perlito to javascript and run it on browser.
+      - The only goal is to introduce new comers to out beloved language.
 
   -
-    speaker: Dana Jacobsen
-    title: Practical Cryptography
+    speaker: Ben Tyler
+    title: Playing with shiny things: Introduction to Elixir
     details:
-      - This talk will discuss cryptographic hashes, signing with DSA, encrypting with RSA, and random numbers.
-      - Rather than discussing the theory and the hundreds of modules available, the focus is on a few good tools to get things done.
-
-  -
-    speaker: Vikentiy Fesunov
-    title: Rust inside Perl
-    details:
-      - Rust is a new systems language with strong focus on memory safety.
-      - It tries to help programmers write more correct code with as little runtime overhead as possible.
-      - XS is an interface used by the perl interpreter to talk to native code, built on top of the C language.
-      - This project's goal is to bring XS API to Rust and explore ways Rust can make development of well behaved perl extensions simpler.
+      - Erlang! Functional programming! Concurrency! Distributed systems! Nine nines uptime! Custom sigils! (wait, custom sigils??)
+      - Elixir is a nifty language built on top of the Erlang VM -- it pairs the Erlang superpowers (concurrency, reliability, distributed systems) with a Ruby-ish syntax and some revisions/reinterpretations of the Erlang standard library.
+      - We'll go through some of the strong and weak points, then build a simple application together.
+      - Along the way, we'll compare some of the properties of the Erlang concurrency model to the event loops we often use for writing asynchronous programs in Perl.
