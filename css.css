@@ -79,71 +79,73 @@ body {
   }
 }
  
-nav {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  width: 100%;
-  z-index: 5;
+nav ul {
+  margin: 0;
+  text-align: center;
+  background-color: #f00;
 }
-
-        nav ul {
-          margin: 0;
-          text-align: center;
-          background-color: #f00;
+        nav ul:after {
+          content: '';
+          display: block;
+          clear: both;
+          height: 0;
         }
-                nav ul:after {
-                  content: '';
-                  display: block;
-                  clear: both;
-                  height: 0;
-                }
-        nav li {
-          list-style: none;
-          display: inline; /*IE staircase*/
+nav li {
+  list-style: none;
+  display: inline; /*IE staircase*/
+}
+nav a {
+  display: inline-block;
+  min-height: 50px;
+  margin-left: 1px;
+  padding: 5px 15px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 50px;
+  background-color: #000;
+  -moz-transition: .5s background ease;
+  -webkit-transition: .5s background ease;
+  -o-transition: .5s background ease;
+  transition: .5s background ease;
+}
+        nav li:first-child a {
+          margin-left: 0;
         }
-        nav a {
-          display: inline-block;
-          min-height: 50px;
-          margin-left: 30px;
-          padding: 5px 15px;
-          color: #fff;
-          font-weight: bold;
-          text-decoration: none;
-          line-height: 50px;
-          background-color: #000;
-          -moz-transition: .5s background ease;
-          -webkit-transition: .5s background ease;
-          -o-transition: .5s background ease;
-          transition: .5s background ease;
+        nav a:focus, nav a:hover, nav a.current {
+          color: #000;
+          background-color: #fff;
         }
-                nav li:first-child a {
-                  margin-left: 0;
-                }
-                nav a:focus, nav a:hover, nav a.current {
-                  color: #000;
-                  background-color: #fff;
-                }
   
-@media screen and (min-width: 600px) {
-  nav a {
-    width: 20%;
-    margin-left: 1px;
+@media screen and (min-width: 700px) {
+  nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 5;
   }
+          nav a {
+            width: 20%;
+          }
 }
 
 .container {
-  padding-top: 60px;
   color: #333;
   background: #e5e5e5;
+}
+@media screen and (min-width: 700px) {
+  .container {
+      padding-top: 60px;
+  }
 }
 
 @media screen and (min-width: 800px) {
   .container {
     position: relative;
     width: 80%;
-    max-width: 1440px; /*think of something better*/
+    max-width: 1440px;
     margin: 0 auto;
     background: #e5e5e5 url(img/bg.png) 0 0 repeat;
     -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -161,15 +163,15 @@ nav {
           text-decoration: none;
         }
 
-div[role=contentinfo] a {
+#footer a {
   color: #f85d51;
 }
-        div[role=contentinfo] a:focus,
-        div[role=contentinfo] a:hover {
+        #footer a:focus,
+        #footer a:hover {
           color: #ddd;
         }
 
-main, div[role=contentinfo] {
+main, footer {
   padding: 1em 10px;
 }
 main {
@@ -180,11 +182,12 @@ main {
         }
 
 @media screen and (min-width: 600px) {
-  main, div[role=contentinfo] {
+  main, footer {
     padding: 4em 20% 10px;
   }
-  div[role=contentinfo] {
+  footer {
     padding-top: 1em;
+    padding-bottom: 3em;
   }
 }
 
@@ -262,11 +265,11 @@ dl ol {
                   margin-bottom: .2em;
                 }  
 
-div[role=contentinfo] {
+footer {
   color: #fff;
   background-color: #504F4F;
 }
-        div[role=contentinfo] li {
+        footer li {
           list-style: circle;
         }
 

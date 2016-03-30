@@ -9,7 +9,7 @@
             <p>All meetings organized by AmsterdamX.pm are completely 100% free-of-charge, and everyone is invited. Anyone can give talks on almost any subject, while Perl-related subjects are obviously more recommended. :) Meetings are usually held at <a href="https://www.google.com/maps/preview#!q=Herengracht+597%2C+1017CE+Grachtengordel-Zuid%2C+Amsterdam%2C+The+Netherlands&data=!4m11!1m10!2i23!4m8!1m3!1d23194967!2d-95.677068!3d37.0625!3m2!1i1228!2i683!4f13.1">Booking.com, 1017CE, Herengracht 597</a>.</p>
             <p>If you feel like giving a talk, contact the <a href="http://mail.pm.org/mailman/listinfo/amsterdamx-pm">AmsterdamX Perl Mongers mailing list</a>, or contact Sawyer X directly.
             <p>The meetings are suitable for beginners, intermediates, and advanced!</p>
-            <p class="upcoming"><a href="events.html#upcoming">Upcoming events</a></p><!-- perl events too like FOSDEM?-->
+            <p class="upcoming"><a href="events.html#upcoming">Upcoming events</a></p>
         </div>
         <div>
             <a id="new_event" href="#new_event"><h2>Next Scheduled Event</h2></a>
