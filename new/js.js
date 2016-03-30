@@ -177,55 +177,49 @@ var XXX = {
         //top menu smoothscroll setup
         //assume tt has set class of 'current' on current page link
         var container = Basis.getElementsByClass('container')[0],
-            mainLinks = document.getElementsByTagName('NAV')[0].getElementsByTagName('UL')[0].getElementsByTagName('A'),
+            navLinks = document.getElementsByTagName('NAV')[0].getElementsByTagName('UL')[0].getElementsByTagName('A'),
+            navLen = navLinks.length,
             navHeight = document.getElementsByTagName('NAV')[0].clientHeight,
             aboutLink,
             currentPage,
-            footerLinks = document.getElementsByTagName('A'),
             footer = document.getElementById('footer');
 
-        footer.tabIndex = 0;
-
-        for (var link=0,l=mainLinks.length;link<l;link++) {
+        for (var link=0;link<navLen;link++) {
             //track current page highlight
-            if (Basis.hasClass(mainLinks[link], 'current')) {
-                currentPage = mainLinks[link];
+            if (Basis.hasClass(navLinks[link], 'current')) {
+                currentPage = navLinks[link];
             }
             //track which one goes to footer
-            if (mainLinks[link].href.indexOf('#footer') != -1) {
-                aboutLink = mainLinks[link];
+            if (navLinks[link].href.indexOf('#footer') != -1) {
+                aboutLink = navLinks[link];
             }
-            mainLinks[link].onclick = function() { 
+            navLinks[link].onclick = function() { 
                 //what if more in-page links are added?
                 //clear all current classes
-                XXX.clearClasses(mainLinks, l);
+                XXX.clearClasses(navLinks, navLen);
                 Basis.addClass(this, 'current');
             };
         } 
 
-        //for all in-page links that go to the #footer...
-        for (var i=0,len=footerLinks.length;i<len;i++) {
-            if (footerLinks[i].href.indexOf('#footer') != -1) {
-                footerLinks[i].onclick = function(e) { 
-                    XXX.smoothScroll(this, e, navHeight);
-                    setTimeout(function() {
-                        footer.focus();
-                    }, 1200);
-                }
-            }
-        }
         //back to top thingie
         var topAnchor = document.createElement('a'),
             toTopText = document.createTextNode('Back to top');
-
         topAnchor.href = '#top';
         topAnchor.id = 'toTop';
         container.appendChild(topAnchor).appendChild(toTopText);
-
-        topAnchor.onclick = function(e) {
-            XXX.smoothScroll(this, e, navHeight);
-        };
       
+        //in-page links smoothscroll + avoid stickynav
+        var pageLinks = document.getElementsByTagName('A'),
+            pageLen = pageLinks.length;
+        for (var i=0;i<pageLen;i++) {
+            pageLinks[i].onclick = function(e) { 
+                if (this.hash) {
+                    XXX.smoothScroll(this, e, navHeight);
+                    window.location.hash='';
+                }
+            }
+        }
+
         //scrolly footery stuff...
         var viewportHeight = Math.max(
                 document.documentElement.clientHeight,
