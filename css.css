@@ -9,6 +9,13 @@ html, body, form, fieldset, legend, th, td, dt, dd {
 nav, main, footer {
   display: block;
 }
+/* nav and footer are focusable destinations from links,
+and we must manage focus there with negative tab index
+plus javascript .focus(), but we don't want that visually
+presented */
+footer:focus, nav:focus {
+  outline: 0;
+}
 
 img {
   vertical-align: bottom;

@@ -20,14 +20,14 @@
     <!-- still need: under IE9 stylesheet, print stylesheet -->
   </head>
   <body>
-    <nav id="top">
+    <nav id="top" tabindex="-1">
         [% INCLUDE menu.tt %]
     </nav>
     <div class="container">
       <main>
         [% content %]
       </main>
-      <footer role="contentinfo" tabindex="-1">
+      <footer id="footer" role="contentinfo" tabindex="-1">
         [% INCLUDE about.tt %]
       </footer>
     </div>

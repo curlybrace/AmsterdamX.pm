@@ -253,11 +253,12 @@ var XXX = {
             return true;
         }
 
-        var destinationY = destination.offsetTop;
-        while (destination.offsetParent &&
-            (destination.offsetParent != document.body)) {
-            destination = destination.offsetParent;
-            destinationY += destination.offsetTop;
+        var destinationY = destination.offsetTop,
+            destination_new = destination;
+        while (destination_new.offsetParent &&
+            (destination_new.offsetParent != document.body)) {
+            destination_new = destination_new.offsetParent;
+            destinationY += destination_new.offsetTop;
         }
   
         clearInterval(interScroll);
@@ -274,6 +275,7 @@ var XXX = {
             if ((isAbove != isAboveNow) || (oldYpos == newYpos)) {
                 window.scrollTo(0, (destinationY - navHeight));
                 clearInterval(interScroll);
+                destination.focus();
             }
         }
         var interScroll = setInterval(scrollWindow, 10);
