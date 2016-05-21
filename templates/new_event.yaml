@@ -1,18 +1,12 @@
-month: March
-daynum: 22nd
-day: Tuesday
+month: May
+daynum: 30th
+day: Monday
 year: 2016
 room: Auditorium
 floor: 5th
-survey:  https://www.surveymonkey.co.uk/r/LVGC2M6
+survey: https://www.surveymonkey.com/r/QM5B65Q
 
 talks:
-  -
-    speaker: James Laver
-    title: Not Your Grandad's C++
-    details:
-      - Build Your Own Modern C++
-
   -
     speaker: Frederico Recsky
     title: Translate Perl to Javascript
@@ -21,10 +15,21 @@ talks:
       - The only goal is to introduce new comers to out beloved language.
 
   -
-    speaker: Ben Tyler
-    title: Playing with shiny things: Introduction to Elixir
+    speaker: Yati Sagade
+    title: Writing (parts of) Android apps in Perl using Perlito
     details:
-      - Erlang! Functional programming! Concurrency! Distributed systems! Nine nines uptime! Custom sigils! (wait, custom sigils??)
-      - Elixir is a nifty language built on top of the Erlang VM -- it pairs the Erlang superpowers (concurrency, reliability, distributed systems) with a Ruby-ish syntax and some revisions/reinterpretations of the Erlang standard library.
-      - We'll go through some of the strong and weak points, then build a simple application together.
-      - Along the way, we'll compare some of the properties of the Erlang concurrency model to the event loops we often use for writing asynchronous programs in Perl.
+      - A demo of using the Perl -> Java compiler from the Perlito project to "run" Perl on the Android Java runtime.
+
+  -
+    speaker: Flávio
+    title: Perl to Java compiler
+    details:
+      - Compile Perl to Java source code, run your Perl in smaller and bigger places like Android, Hadoop. Learn more about how Perl works in a different memory system, with access to a different set of libraries.
+
+  -
+    speaker: Bosko Devetak
+    title: Perl as a first class citizen in Hadoop land
+    details:
+      - In Hadoop land (MapReduce, Hive, HBase) all non-jvm languages are second class citizens that mostly depend on the REST or thrift servers in order to get access to different functionality. But not all is available so it can be limiting at times.
+      - Luckily, Perlito Java Backend opens up the possibility of accessing native hadoop/hive/hbase java APIs from Perl.
+      - This talk will give some examples of that, like writing Hive UDF’s in Perl using Perlito Java Backend.
