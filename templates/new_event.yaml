@@ -1,35 +1,21 @@
-month: May
-daynum: 30th
+month: Feb
+daynum: 27th
 day: Monday
-year: 2016
+year: 2017
 room: Auditorium
 floor: 5th
-survey: https://www.surveymonkey.com/r/QM5B65Q
+survey: https://www.surveymonkey.com/r/VSYDN53
 
 talks:
   -
-    speaker: Frederico Recsky
-    title: Translate Perl to Javascript
+    speaker: Stevan Little
+    title: Hold my beer and watch this!
     details:
-      - Using Perlito "perl dialect", we translate perlito to javascript and run it on browser.
-      - The only goal is to introduce new comers to out beloved language.
+      - Perl has been described in many ways; a Shinto Shrine, executable line noise, a Swiss Army Chainsaw, the Duct Tape of the Internet, etc. But I think Perl is more like a old pop star, always reinventing itself to stay relevant, never truly leaving our consciousness, always just a melody away. What is the state of Perl today? Will Perl 6 be the big comeback? Will 2017 be the year we make Perl great again?
 
   -
-    speaker: Yati Sagade
-    title: Writing (parts of) Android apps in Perl using Perlito
+    speaker: Sawyer X
+    title: Perl 5.24, 5.26, and the Future of Perl 5
     details:
-      - A demo of using the Perl -> Java compiler from the Perlito project to "run" Perl on the Android Java runtime.
-
-  -
-    speaker: Flávio
-    title: Perl to Java compiler
-    details:
-      - Compile Perl to Java source code, run your Perl in smaller and bigger places like Android, Hadoop. Learn more about how Perl works in a different memory system, with access to a different set of libraries.
-
-  -
-    speaker: Bosko Devetak
-    title: Perl as a first class citizen in Hadoop land
-    details:
-      - In Hadoop land (MapReduce, Hive, HBase) all non-jvm languages are second class citizens that mostly depend on the REST or thrift servers in order to get access to different functionality. But not all is available so it can be limiting at times.
-      - Luckily, Perlito Java Backend opens up the possibility of accessing native hadoop/hive/hbase java APIs from Perl.
-      - This talk will give some examples of that, like writing Hive UDF’s in Perl using Perlito Java Backend.
+      - "Perl 5 is doing well in its latest stable version: 5.24. It will soon see it's newest version: 5.26. So why is 5.24 exciting, why will 5.26 be even more exciting, and what can we expect of future versions of Perl 5?"
+      - This is my talk given at FOSDEM, for those who could not attend and would like to know what the status and the future of Perl 5 is.
