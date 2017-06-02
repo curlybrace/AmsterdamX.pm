@@ -1,21 +1,21 @@
-month: Feb
-daynum: 27th
-day: Monday
-year: 2017
-room: Auditorium
-floor: 5th
-survey: https://www.surveymonkey.com/r/VSYDN53
+month: June
+daynum: 8th
+day: Thursday
+year: 2018
+room: Amsterdam
+floor: 1st
+survey: https://www.surveymonkey.com/r/8LZJTHP
 
 talks:
   -
-    speaker: Stevan Little
-    title: Hold my beer and watch this!
+    speaker: brian d foy
+    title: A survey of the most interesting Perl 5.26 features
     details:
-      - Perl has been described in many ways; a Shinto Shrine, executable line noise, a Swiss Army Chainsaw, the Duct Tape of the Internet, etc. But I think Perl is more like a old pop star, always reinventing itself to stay relevant, never truly leaving our consciousness, always just a melody away. What is the state of Perl today? Will Perl 6 be the big comeback? Will 2017 be the year we make Perl great again?
+      - Perl 5.26.0 just came out and it carries quite a few interesting things with it. Hear all about it!
 
   -
-    speaker: Sawyer X
-    title: Perl 5.24, 5.26, and the Future of Perl 5
+    speaker: brian d foy
+    title: PrettyDump'ing in Perl 6
     details:
-      - "Perl 5 is doing well in its latest stable version: 5.24. It will soon see it's newest version: 5.26. So why is 5.24 exciting, why will 5.26 be even more exciting, and what can we expect of future versions of Perl 5?"
-      - This is my talk given at FOSDEM, for those who could not attend and would like to know what the status and the future of Perl 5 is.
+      - brian presents his PrettyDump module, a data dumper for Perl 6, along with the interesting Perl 6 features in its implementation.
+      - He started working on this as a way to create quick data dumps for Learning Perl 6 examples but things got a little out of control.
