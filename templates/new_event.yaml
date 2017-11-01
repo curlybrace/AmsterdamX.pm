@@ -1,21 +1,27 @@
-month: June
-daynum: 8th
-day: Thursday
-year: 2018
-room: Amsterdam
-floor: 1st
-survey: https://www.surveymonkey.com/r/8LZJTHP
+month: November
+daynum: 27th
+day: Monday
+year: 2017
+room: Auditorium
+floor: 5th
+survey: https://www.surveymonkey.com/r/3CDKM7T
 
 talks:
   -
-    speaker: brian d foy
-    title: A survey of the most interesting Perl 5.26 features
+    speaker: Alex Littlejohn
+    title: Building apps with Flutter
     details:
-      - Perl 5.26.0 just came out and it carries quite a few interesting things with it. Hear all about it!
+      - Our learnings from attempting to re-implement the Pulse app in the Flutter SDK.
 
   -
-    speaker: brian d foy
-    title: PrettyDump'ing in Perl 6
+    speaker: Kayla Meduna
+    title: Imposter Syndrome: The Battle Begins
     details:
-      - brian presents his PrettyDump module, a data dumper for Perl 6, along with the interesting Perl 6 features in its implementation.
-      - He started working on this as a way to create quick data dumps for Learning Perl 6 examples but things got a little out of control.
+      - "Imposter syndrome: feeling inadequate despite evidence of success. Come learn more about what impostor syndrome is, what it can turn into, how to overcome it, and how to help others who are struggling. There will be activities."
+
+  -
+    speaker: Mickey Nnasriachi
+    title: Dancer from Scratch
+    details:
+      - "A web-framework is great. In fact, it's awesome. it's way more stable/secure and tested than anything you will build yourself in one afternoon."
+      - "But.... you will better use the framework if you understand how it works and there's no better and more fun way to do that than to build your own - so attend my talk to  find out how you can easily do that using a few simple building blocks."
